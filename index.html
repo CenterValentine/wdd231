@@ -4,12 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Course Home Page">
+    <meta name="author" content="David Valentine">
+    <title>Course Home Page</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/course-home.css">
+    <link rel="stylesheet" href="styles/course-home-mobile.css">
+
 </head>
 
-<body>
+<!-- <body> -->
+<header class="header">
+    <div class="header-wrap shadow">
+        <picture>
+            <img class="shadow" src="./images/me.jpeg" alt="David Valentine" width="100" height="">
+        </picture>
+        <h1>David P. Valentine</h1>
+    </div>
+    <nav class="navigation">
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>Chamber</li>
+            </a>
+            <a href="#">
+                <li>GitHub Profile</li>
+            </a>
+            <a href="https://linkedin.com">
+                <li>LinkedIn</li>
+            </a>
+        </ul>
+    </nav>
+</header>
+<main class="hero">
+    <div class="hero-top">
+        <div class="hero-top-starter">
+            <section class="course-work">
+                <div class="course-work-inner shadow">
+                    <div class="course-work-top-inner">
+                        <h1>Course Work</h1>
+                    </div>
+                    <ul>
+                        <li>Bullet one</li>
+                        <li>Bullet 2</li>
+                        <li>Bullet 3</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="location">
+                <div class="location-inner shadow">
+                    <div class="location-top-inner">
+                        <h1> St. George, UT</h1>
+                    </div>
+                    <div class="location-bottom-inner">
+                    <picture>
+                        <img src="./images/rocks.jpg" alt="St. George, UT" height="150">
+                    </picture>
+                    <div class="caption">
+                        <caption class="">Red rocks</caption>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="hero-bottom">
+        <section class="certificates">
+            <div class="certificates-inner shadow">
+                <div class="certificates-top-inner">
+                    <h1>Web and Computer Programming Certificate</h1>
+                </div>
+                <div class="certificates-selections">
+                    <div>All</div>
+                    <div>CSE</div>
+                    <div>WDD</div>
+                </div>
+                <!-- page line -->
+                <hr width="100%" size="2">
+                <div class="certificates-course-boxes">
+                    <div>
+                        Box 1
+                    </div>
+                    <div>
+                        Box 2
+                    </div>
+                    <div>
+                        Box 3
+                    </div>
+                    <div>
+                        Box 4
+                    </div>
+                    <div>
+                        Box 5
+                    </div>
+                    <div>
+                        Box 6
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer class="classic-footer">
+    <div>
+        <span id="currentyear">
+
+            <p id="lastupdated"></p>
+        </span>
+    </div>
+</footer>
+<script src="scripts/getdates.js" defer></script>
 
 </body>
 

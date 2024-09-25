@@ -1,0 +1,33 @@
+@media screen and (max-width: 700px){
+
+.navigation {
+    /* display: none; */
+}
+
+/* .hero-top {
+    flex-direction: row;
+} */
+
+.hero-top-starter {
+    flex-direction: column;
+}
+
+.certificates-selections {
+    width: 90%;
+}
+
+.certificates-inner{
+    width: 100%;
+}
+
+.certificates-selections > div {
+width: 100%;
+}
+
+.certificates-course-boxes {
+    flex-direction: column;
+    width: 100%;
+}
+
+
+}
