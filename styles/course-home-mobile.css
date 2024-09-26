@@ -8,16 +8,32 @@
     flex-direction: row;
 } */
 
+.hero-top {
+    /* margin: 1rem; */
+}
+
 .hero-top-starter {
     flex-direction: column;
+    width: 94%;
 }
+
+.course-work,.location {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 .certificates-selections {
     width: 90%;
 }
 
+
 .certificates-inner{
     width: 100%;
+}
+
+.certificates-top-inner {
+    text-align: center;
 }
 
 .certificates-selections > div {
@@ -27,6 +43,12 @@ width: 100%;
 .certificates-course-boxes {
     flex-direction: column;
     width: 100%;
+    padding-bottom: 1rem;
+}
+
+
+.certificates-course-boxes > div {
+    width: 75%;
 }
 
 

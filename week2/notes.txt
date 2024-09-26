@@ -1,0 +1,9 @@
+&#9776 = hamburger menu icon/button
+class = active or current-menu-item
+
+
+hamburgerElement.addEventListener('click',() => {
+    navElement.classLIst.toggle('open');
+})
+
+Icon would be up 40px tall.

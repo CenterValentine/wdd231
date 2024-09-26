@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    /* max-width: 100vw; */
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    /* margin: 0; */
+}
+
+
+
+header{
+    /* padding: 0rem; */
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+
+#cards{
+    margin: 1rem;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.pcard{
+    background-color: beige;
+    padding: 1rem;
+    margin: .25rem;
+    width: 20vw;
+    display: flex;
+    flex-direction: column ;
+    justify-content:flex-start;
+    align-items: center;
+    border: 1px solid black;
+}
+.pcard > h2{
+    font-size: 1.25rem;
+}
+
+.pcard > p {
+    font-size: .75rem;
+    margin: .1rem;
+}
+.pcard > img{
+    /* width: 80%; */
+    height: auto;
+    margin-top: .25rem;
+}
+
+@media screen and (max-width: 700px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .pcard{
+        width: 85%;
+        justify-self: center;
+
+    }
+
+    .pcard > img{
+        width: 50%;
+    }
+
+
+
+    #cards{
+       
+    }
+}

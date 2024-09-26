@@ -293,11 +293,12 @@ navigation {
 .certificates-selections div {
     background-color: var(--main-color);
     color: var(--sample-color);
-    padding: .3rem 1.3rem;
+    padding: .5rem 1.3rem;
     min-width: 5rem;
     text-align: center;
     margin: 1rem;
     border-radius: 6px;
+    
 }
 
 .certificates-course-boxes {
@@ -323,7 +324,7 @@ navigation {
 
 
     margin: .3rem;
-    padding: .3rem 1.3rem;
+    padding: .5rem 1.3rem;
     border-radius: 6px;
 
 }
