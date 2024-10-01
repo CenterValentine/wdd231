@@ -1,0 +1,104 @@
+{
+  "businesses": [
+  
+    {
+      "name": "Domo Arrigato",
+      "address": "12 Samuri Way, Charleston, SC 29401",
+      "phone": "555-238-8329",
+      "industry": "Japanese Cuisine",
+      "website": "https://domoarrigato.com",
+      "image": "https://images.pexels.com/photos/858508/pexels-photo-858508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "membership": 2
+    },
+    {
+      "name": "Mr. Holland's Opus",
+      "address": "24 Music Ct., Charleston, SC 29401",
+      "phone": "555-238-8328",
+      "industry": "Music Store",
+      "website": "https://hollandmusic.com",
+      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+      "membership": 3
+    },
+    {
+      "name": "The Bean Hub",
+      "address": "102 Coffee Ln., Charleston, SC 29401",
+      "phone": "555-239-1020",
+      "industry": "Gourmet Hot Choclate",
+      "website": "https://thebeanhub.com",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+      "membership": 1
+    },
+    {
+      "name": "Tech Savannah",
+      "address": "45 Silicon Ave., Charleston, SC 29401",
+      "phone": "555-240-2045",
+      "industry": "Tech Consulting",
+      "website": "https://techsavannah.com",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      "membership": 1
+    },
+    {
+      "name": "Bayside Blooms",
+      "address": "321 Floral St., Charleston, SC 29401",
+      "phone": "555-241-8320",
+      "industry": "Florist",
+      "website": "https://baysideblooms.com",
+      "image": "https://images.unsplash.com/photo-1487530811176-3780de880c2d?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "membership": 3
+    },
+    {
+      "name": "The Artisan Market",
+      "address": "198 Craft Cir., Charleston, SC 29401",
+      "phone": "555-242-1981",
+      "industry": "Artisanal Goods",
+      "website": "https://artisanmarket.com",
+      "image": "https://images.pexels.com/photos/11747898/pexels-photo-11747898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "membership": 2
+    },
+    {
+      "name": "Charleston Cycles",
+      "address": "57 Pedal Dr., Charleston, SC 29401",
+      "phone": "555-243-5757",
+      "industry": "Bicycle Shop",
+      "website": "https://charlestoncycles.com",
+      "image": "https://images.unsplash.com/photo-1567070694401-dd52d7b46429?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "membership": 1
+    },
+    {
+      "name": "Porriage Revolution",
+      "address": "64 Rice Water Way. Charleston, SC 29405",
+      "phone":"555-239-5892",
+      "industry": "Chinese Cuisine",
+      "website": "https://porriagereveolution.soup",
+      "image":"https://images.pexels.com/photos/6646360/pexels-photo-6646360.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "membership": 2
+    },
+    {
+      "name": "Mr. Magoo's Shoe Shop",
+      "address": "2 Shoe Lp . Charleston, SC 29405",
+      "phone":"555-239-5892",
+      "industry": "Shoes",
+      "website": "https://magoosshoes.shop",
+      "image":"https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "membership": 3
+    },
+    {
+      "name": "The Judgement Bar",
+      "address": "Armstrong Way . Charleston, SC 29405",
+      "phone":"555-239-5892",
+      "industry": "Fitness & Wellness",
+      "website": "https://thejudgementbar.fitness",
+      "image":"https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "membership": 1
+    },
+    {
+      "name": "Crack Chiropractic",
+      "address": "2 Soar Bach. Charleston, SC 29405",
+      "phone":"555-239-5892", 
+      "industry": "Health & Wellness",
+      "website": "https://crackback.com",
+      "image":"https://images.pexels.com/photos/3764548/pexels-photo-3764548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "membership": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Directory</title>
+    <meta name="description" content="">
+    <meta name="author" content="David Valentine">
+    <link rel="icon" href="/chamber/images/favicon.ico">
+    <meta property="og:title" content="David's Chamber of Commerce" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="twitter:title" content="Sailor's Chamber of Commerce" />
+    <!-- A short description or summary of the object. [Between 2 and 4 sentences.] -->
+    <meta property="twitter:description" content="Helping community and business unite." />
+    <!--  It should be at least 600×315 pixels, but 1200×630 or larger is preferred (up to 5MB). Stay close to a 1.91:1 aspect ratio to avoid cropping. -->
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/primary.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="/chamber/scripts/directory.js" defer></script>
+
+    --
+</head>
+
+
+<header>
+    <div id="header" class="flex">
+        <div id="brand" class="grid">
+            <img id="logo" src="/chamber/images/logo.png" height="65px"></a>
+            <h1 id="horizontal-logo">Timbuktu</h1>
+            <p id="logo-description">Chamber of Commerce</p>
+        </div>
+        <nav id="navigation" class="flex">
+            <ul id="menu" class="menu flex">
+                <li><a href="/chamber/index.html" title="Home">Home</a></li>
+                <li><a href="#" title="Directory">Directory</a></li>
+                <li><a href="#" title="Join">Join</a></li>
+                <li><a href="#" title="Discover">Discover</a></li>
+            </ul>
+            <button id="menu-button">&#9776</button>
+        </nav>
+
+    </div>
+</header>
+<main>
+    <section id="directory" class="page-theme">
+        <h1>Directory</h1>
+        <div id="directory-options" class="flex">
+            <p><span>▦</span><br>Grid</p>
+            <label class="grid-switch">
+                <input id="toggleSwitch" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <p><span>▤</span><br> List</p>
+        </div>
+        <div id="cards" class="cards flex">
+
+
+        </div>
+    </section>
+</main>
+<footer id="footer" class="flex">
+    <span id="footer-address">
+        <address> King St. Charleston, SC</address>
+    </span>
+    <span id="footer-media"></span>
+    <span id="footer-site-info">
+        <p>David Valentine</p>
+    </span>
+</footer>
+</body>
+
+</html>
