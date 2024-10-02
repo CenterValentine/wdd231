@@ -3,7 +3,9 @@
     .navigation {
         /* display: none; */
     }
-
+.header-wrap h1 {
+    margin: auto;
+}
 
     .navigation ul {
 
