@@ -2,6 +2,10 @@
 filters = document.querySelector('#filters');
 
 cards = document.querySelector('#certificates-course-boxes');
+numberOfCreditsItem = document.querySelector('#numberOfCredits');
+hamburger = document.querySelector('#hamburger')
+let menu = document.querySelector('#menu')
+
 
 const courses = [
     {
@@ -87,67 +91,91 @@ const courses = [
 loadCourses();
 
 
-
+function updateNumberOfCredits(countedCredits) {
+    console.log('Updating count: ', countedCredits)
+    numberOfCreditsItem.textContent = countedCredits
+}
 
 function loadCourses(event) {
-
+    let numberOfCredits = 0;
     console.log("event: ", event);
-
     courses.forEach(course => {
         let card = document.createElement('div')
         // console.log(card);
+        numberOfCredits += course.credits;
+        console.log()
+        card.setAttribute('data-course-credits', course.credits);
         card.textContent = `${course.subject} ${course.number}`;
-
         if (course.completed) {
             card.setAttribute('class', 'course card-Completed');
         }
         else {
             card.setAttribute('class', 'course card-Incomplete');
         }
-
         cards.appendChild(card);
     });
-
+    updateNumberOfCredits(numberOfCredits);
 };
 
 function refreshCourses(id) {
+    let numberOfCredits = 0;
     console.log("cards", cards);
     var courseCards = cards.querySelectorAll('.course');
     console.log(courseCards)
-
-
     courseCards.forEach((card) => {
+
         console.log('card: ', card);
         console.log('card Content: ', card.textContent);
+        // console.log('card Course Credits: ', card.getAttribute('data-course-credits'));
         let subject = card.textContent.match(/\w\w\w/);
-
         switch (id) {
             case 'All':
-                card.classList.remove('hide')
+                card.classList.remove('hide-card')
+                numberOfCredits += parseInt(card.getAttribute('data-course-credits'));
                 break;
             case 'CSE':
                 if (id != subject) {
-                    card.classList.toggle('hide')
+                    card.classList.toggle('hide-card')
                 } else {
-                    card.classList.remove('hide')
+                    numberOfCredits += parseInt(card.getAttribute('data-course-credits'));
+                    card.classList.remove('hide-card')
                 }
                 break;
             case 'WDD':
                 if (id != subject) {
-                    card.classList.toggle('hide')
+                    card.classList.toggle('hide-card')
                 } else {
-                    card.classList.remove('hide')
+                    numberOfCredits += parseInt(card.getAttribute('data-course-credits'));
+                    card.classList.remove('hide-card')
                 }
                 break;
         };
     });
-
-
+    updateNumberOfCredits(numberOfCredits);
 };
 
 
 filters.addEventListener('click', (event) => {
     refreshCourses(event.target.textContent)
 });
+
+hamburger.addEventListener('click', (event) => {
+
+    console.log("hamburger.textContent: ", hamburger.textContent)
+    switch (hamburger.textContent) {
+        case "≡":
+            hamburger.textContent = "x";
+            menu.classList.remove('hide');
+            break;
+        case "x":
+            hamburger.textContent = "≡";
+            menu.classList.add('hide');
+            break;
+    }
+
+
+
+});
+
 
 

@@ -3,8 +3,8 @@
 :root {
     --main-color: darkblue;
     --main-color-lighter: hsla(240, 100%, 60%, 0.8);
-    --secondary-color: rgb(20, 148, 187);
-    --tertiary-color: rgb(139, 125, 0);
+    --secondary-color: rgb(19, 141, 179);
+    --tertiary-color: rgb(9, 25, 244);
     --sample-color: #f1f1f1;
     --off-white: #e1e2e3;
     --default-size: 1.1rem;
@@ -190,6 +190,16 @@ navigation {
 
 .course-work-inner ul li {
     margin: 1rem;
+
+}
+
+
+.course-work-inner ul a {
+    cursor: pointer;
+}
+
+.navigation ul a:hover:not(#hamburger) {
+    background-color: var(--main-color-lighter);
 }
 
 .location {
@@ -318,7 +328,7 @@ navigation {
 
 }
 
-.filter{
+.filter {
     background-color: var(--main-color);
 }
 
@@ -358,19 +368,30 @@ navigation {
     background-color: var(--secondary-color);
     margin-top: 2rem;
     width: 100%;
-
 }
 
 .classic-footer>div {
     /* border-radius: 6px; */
-
     width: 100%;
     margin-top: 1rem;
     text-align: center;
     padding: 1.5rem;
 }
 
-#certificates-course-boxes .hide {
+#certificates-course-boxes .hide-card {
     display: none;
-
 }
+
+#hamburger {
+    font-size: 4rem;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.active {
+    background-color: var(--main-color-lighter);
+}
+
+
