@@ -25,7 +25,6 @@ async function displaybusinesses(directory) {
         const website = document.createElement('a');
         const businessSpecs = document.createElement('div')
         // const anchor = document.createElement('a');
-
         // const items = [industry, address, phone, bizImage, website]
 
         website.textContent = `Visit Website (${directory.website})`;

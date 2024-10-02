@@ -12,9 +12,8 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/course-home.css">
     <link rel="stylesheet" href="styles/course-home-mobile.css">
-
+    <script src="/scripts/course-filter.js" defer></script>
 </head>
-
 <!-- <body> -->
 <header class="header">
     <div class="header-wrap shadow">
@@ -61,13 +60,13 @@
                         <h1> St. George, UT</h1>
                     </div>
                     <div class="location-bottom-inner">
-                    <picture>
-                        <img src="./images/rocks.jpg" alt="St. George, UT" height="150">
-                    </picture>
-                    <div class="caption">
-                        <caption class="">Red rocks</caption>
+                        <picture>
+                            <img src="./images/rocks.jpg" alt="St. George, UT" height="150">
+                        </picture>
+                        <div class="caption">
+                            <caption class="">Red rocks</caption>
+                        </div>
                     </div>
-                </div>
 
                 </div>
             </section>
@@ -79,32 +78,18 @@
                 <div class="certificates-top-inner">
                     <h1>Web and Computer Programming Certificate</h1>
                 </div>
-                <div class="certificates-selections">
-                    <button class='all-filter'>All</div></button>
-                    <div class='cse-filter'>CSE</div>
-                    <div class='wdd-filter'>WDD</div>
+                <div id='filters' class="certificates-selections">
+                    <div id="all-filter" class='filter'>All</div>
+                    <div id='cse-filter' class='filter'>CSE</div>
+                    <div id='wdd-filter' class='filter'>WDD</div>
                 </div>
                 <!-- page line -->
                 <hr width="100%" size="2">
-                <div class="certificates-course-boxes">
-                    <div class="course">
+                <div id="certificates-course-boxes">
+                    <!-- <div class="course">
                         CSE 110
-                    </div>
-                    <div class="course">
-                        WDD 130
-                    </div>
-                    <div class="course">
-                        CSE 111
-                    </div>
-                    <div class="course">
-                        CSE 210
-                    </div>
-                    <div class="course">
-                        WDD 131
-                    </div>
-                    <div class="course">
-                        WDD 231
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
         </section>

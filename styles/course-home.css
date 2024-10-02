@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 :root {
-    --main-color:darkblue;
-    --secondary-color:rgb(20, 148, 187);
-    --tertiary-color: darkblue;
+    --main-color: darkblue;
+    --main-color-lighter: hsla(240, 100%, 60%, 0.8);
+    --secondary-color: rgb(20, 148, 187);
+    --tertiary-color: rgb(139, 125, 0);
     --sample-color: #f1f1f1;
     --off-white: #e1e2e3;
     --default-size: 1.1rem;
@@ -11,7 +12,6 @@
     --small-size: 0.75rem;
     --medium-size: 1.25rem;
     --extra-small-size: 0.5rem;
-
 }
 
 * {
@@ -56,7 +56,7 @@ a {
     background-color: var(--main-color);
     justify-content: center;
     margin: 0;
-    
+
 }
 
 .header-wrap {
@@ -221,7 +221,7 @@ navigation {
 
 
 
-.location-inner img{
+.location-inner img {
     padding: 1rem;
 }
 
@@ -232,7 +232,7 @@ navigation {
 
 .location-bottom-inner {
     height: 100%;
-    justify-content:stretch;
+    justify-content: stretch;
     align-items: stretch;
 }
 
@@ -242,7 +242,7 @@ navigation {
     justify-content: start;
     align-items: start;
     width: 100%;
-    
+
 
 }
 
@@ -282,8 +282,6 @@ navigation {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
-
 }
 
 .certificates-inner hr {
@@ -291,42 +289,65 @@ navigation {
 }
 
 .certificates-selections div {
-    background-color: var(--main-color);
+
     color: var(--sample-color);
     padding: .5rem 1.3rem;
     min-width: 5rem;
     text-align: center;
     margin: 1rem;
     border-radius: 6px;
-    
+
 }
 
-.certificates-course-boxes {
+/* 
+.filter {
+    background-color: var(--test1-color);
+    margin: .3rem;
+    padding: .5rem 1.3rem;
+    border-radius: 6px;
+} */
+
+#certificates-course-boxes {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 70%;
     flex-wrap: wrap;
-    
+
 
 }
 
+.filter{
+    background-color: var(--main-color);
+}
 
-.certificates-course-boxes div {
-    background-color: var(--test1-color);
+#certificates-course-boxes div,
+.filter {
+    /* background-color: var(--test1-color); */
     width: 5rem;
+    min-width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
     color: var(--sample-color);
-
-
+    cursor: pointer;
     margin: .3rem;
     padding: .5rem 1.3rem;
     border-radius: 6px;
+}
 
+
+.filter:hover {
+    background-color: var(--main-color-lighter);
+}
+
+.card-Completed {
+    background-color: var(--main-color);
+}
+
+.card-Incomplete {
+    background-color: var(--tertiary-color);
 }
 
 .classic-footer {
@@ -342,9 +363,14 @@ navigation {
 
 .classic-footer>div {
     /* border-radius: 6px; */
-    
+
     width: 100%;
     margin-top: 1rem;
     text-align: center;
     padding: 1.5rem;
+}
+
+#certificates-course-boxes .hide {
+    display: none;
+
 }
