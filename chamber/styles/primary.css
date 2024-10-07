@@ -2,17 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200..800&display=swap');
 
+
+HSDOCOIJHEt {
+color: #02111B;
+color: #3F4045;
+color: #30292F;
+color: #5D737E;
+color: #5D737E;
+
+color: #FCFCFC;
+
+color: #D1D1D1;
+color: #DBDBDB;
+color: #85C7F2;
+color: #636363;
+color: #4C4C4C;
+}
+
 :root {
-    --primary-color: green;
-    --secondary-color: yellow;
-    --accent-color: #a0a72c;
+    --primary-color: #02111B;
+    --secondary-color: #3F4045;
+    --accent-color: #30292F;
     --main-font: 'Open+Sans', 'Manrope';
     --secondary-font: Sans;
+    --primary-font-color: #FCFCFC;
+    --secondary-font-color: #5D737E;
 }
 
 * {
     margin: 0;
     font-family: var(--main-font);
+    color: var(--primary-font-color)
 }
 
 #header,
@@ -50,6 +70,11 @@ li {
 
 a {
     text-decoration: none;
+}
+
+#directory-options *, #directory > h1 {
+    color: var(--secondary-font-color);
+    
 }
 
 #brand {
