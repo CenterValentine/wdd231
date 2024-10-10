@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +21,10 @@
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/primary.css">
+    <link rel="stylesheet" href="styles/primary-mobile.css">
     <link rel="stylesheet" href="styles/directory.css">
     <script src="/chamber/scripts/directory.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
 
     --
 </head>
@@ -34,13 +37,16 @@
             <p id="logo-description">Chamber of Commerce</p>
         </div>
         <nav id="navigation" class="flex">
-            <ul id="menu" class="menu flex">
-                <li><a href="/chamber/index.html" title="Home">Home</a></li>
-                <li><a href="#" title="Directory">Directory</a></li>
-                <li><a href="#" title="Join">Join</a></li>
-                <li><a href="#" title="Discover">Discover</a></li>
-            </ul>
-            <button id="menu-button">&#9776</button>
+            <p id="hamburger" class="hide">≡</p>
+            <div id="menu" class="hide">
+                <ul id="menu-list" class="menu-list  flex">
+                    <li><a href="/chamber/index.html" title="Home" class="active">Home</a></li>
+                    <li><a href="#" title="Directory">Directory</a></li>
+                    <li><a href="#" title="Join">Join</a></li>
+                    <li><a href="#" title="Discover">Discover</a></li>
+                </ul>
+            </div>
+            <!-- <button id="menu-button">&#9776</button> -->
         </nav>
 
     </div>
@@ -49,7 +55,7 @@
     <section id="directory" class="page-theme">
         <h1>Directory</h1>
         <div id="directory-options" class="flex">
-            
+
             <p><span>▦</span><br>Grid</p>
             <label class="grid-switch">
                 <input id="toggleSwitch" type="checkbox">

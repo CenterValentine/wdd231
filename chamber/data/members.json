@@ -3,15 +3,19 @@
   
     {
       "name": "Domo Arrigato",
+      "catchphrase": "Unforgettable Japanese Cuisine",
+      "email": "domo@arrigato.food",
       "address": "12 Samuri Way, Charleston, SC 29401",
       "phone": "555-238-8329",
       "industry": "Japanese Cuisine",
-      "website": "https://domoarrigato.com",
+      "website": "https://arrigato.food",
       "image": "https://images.pexels.com/photos/858508/pexels-photo-858508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "membership": 2
     },
     {
       "name": "Mr. Holland's Opus",
+      "catchphrase": "Music for the Soul",
+      "email": "Holland@hollandmusic.com",
       "address": "24 Music Ct., Charleston, SC 29401",
       "phone": "555-238-8328",
       "industry": "Music Store",
@@ -21,7 +25,9 @@
     },
     {
       "name": "The Bean Hub",
-      "address": "102 Coffee Ln., Charleston, SC 29401",
+      "catchphrase": "The Beanest in Town",
+      "email": "cocoamotion@thebeanhub.com",
+      "address": "102 Choclate Ln., Charleston, SC 29401",
       "phone": "555-239-1020",
       "industry": "Gourmet Hot Choclate",
       "website": "https://thebeanhub.com",
@@ -30,6 +36,8 @@
     },
     {
       "name": "Tech Savannah",
+      "catchphrase": "Tech Solutions for the Modern World",
+      "email": "service@techsavannah.com",
       "address": "45 Silicon Ave., Charleston, SC 29401",
       "phone": "555-240-2045",
       "industry": "Tech Consulting",
@@ -39,6 +47,8 @@
     },
     {
       "name": "Bayside Blooms",
+      "catchphrase": "Flowers for Every Occasion",
+      "email": "flowerpower@baysideblooms.com",
       "address": "321 Floral St., Charleston, SC 29401",
       "phone": "555-241-8320",
       "industry": "Florist",
@@ -48,6 +58,8 @@
     },
     {
       "name": "The Artisan Market",
+      "catchphrase": "Find Your Next Masterpiece",
+      "email": "support@artisanmarket.com",
       "address": "198 Craft Cir., Charleston, SC 29401",
       "phone": "555-242-1981",
       "industry": "Artisanal Goods",
@@ -57,6 +69,8 @@
     },
     {
       "name": "Charleston Cycles",
+      "catchphrase": "Ride in Style",
+      "email": "support@charlestoncycles.com",
       "address": "57 Pedal Dr., Charleston, SC 29401",
       "phone": "555-243-5757",
       "industry": "Bicycle Shop",
@@ -66,6 +80,8 @@
     },
     {
       "name": "Porriage Revolution",
+      "catchphrase": "The Best in Chinese Cuisine",
+      "email": "support@porriagerevolution.soup",
       "address": "64 Rice Water Way. Charleston, SC 29405",
       "phone":"555-239-5892",
       "industry": "Chinese Cuisine",
@@ -75,6 +91,8 @@
     },
     {
       "name": "Mr. Magoo's Shoe Shop",
+      "catchphrase": "Shoes for your soul",
+      "email": "mrmagoo@magoosshoes.com",
       "address": "2 Shoe Lp . Charleston, SC 29405",
       "phone":"555-239-5892",
       "industry": "Shoes",
@@ -84,6 +102,8 @@
     },
     {
       "name": "The Judgement Bar",
+      "catchphrase": "Real Fitness for weaklings",
+      "email": "fit@thejudgementbar.fitness",
       "address": "Armstrong Way . Charleston, SC 29405",
       "phone":"555-239-5892",
       "industry": "Fitness & Wellness",
@@ -93,6 +113,8 @@
     },
     {
       "name": "Crack Chiropractic",
+      "catchphrase": "Step on a crack, feel better",
+      "email": "support@crackback.com",
       "address": "2 Soar Bach. Charleston, SC 29405",
       "phone":"555-239-5892", 
       "industry": "Health & Wellness",

@@ -18,51 +18,104 @@
     <!--  It should be at least 600×315 pixels, but 1200×630 or larger is preferred (up to 5MB). Stay close to a 1.91:1 aspect ratio to avoid cropping. -->
     <meta property="twitter:image" content="" />
     <meta property="twitter:card" content="summary_large_image" />
-
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/primary.css">
 
     <link rel="stylesheet" href="styles/normalize.css">
-    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <link rel="stylesheet" href="styles/primary-mobile.css">
     <link rel="stylesheet" href="styles/index.css">
+
+    <script src="/chamber/scripts/home.js" defer></script>
 </head>
 
 <body>
 
+    <header>
+        <div id="header" class="flex">
+            <div id="brand" class="grid">
+                <img id="logo" src="/chamber/images/logo.png" height="65px" loading="lazy"></a>
+                <h1 id="horizontal-logo">Timbuktu</h1>
+                <p id="logo-description">Chamber of Commerce</p>
+            </div>
+            <nav id="navigation" class="flex">
+                <ul id="menu" class="menu flex">
+                    <li><a href="/chamber/index.html" title="Home">Home</a></li>
+                    <li><a href="/chamber/directory.html" title="Directory">Directory</a></li>
+                    <li><a href="#" title="Join">Join</a></li>
+                    <li><a href="#" title="Discover">Discover</a></li>
+                </ul>
+                <button id="menu-button">&#9776</button>
+            </nav>
+        </div>
+    </header>
     <main>
-        <section id="hero">
-            <img href="hero.jpg" loading="lazy">
-            <button id="hero-button">Keynote Tickets</button>
-        </section>
-        <section id="home" class="page-theme">
-            <h1>Home</h1>
-            <div class="card home-card">
-                <h2>Events</h2>
-            </div>
-            <div class="card home-card">
-                <h2>Current Weather</h2>
-            </div>
-            <div class="card home-card">
-                <h2>Weather Forecast</h2>
-            </div>
-        </section>
-        <section>
-            <div class="card biz-card">
-                <div class="biz-card-header">
-                    <h2></h2>
-                    <p></p>
+        <div id="content">
+            <section id="hero">
+                <img src="/chamber/images/networking2.jpeg" height="550px" loading="lazy">
+                <div class="hero-div flex">
+                    <p>Get Results</h1>
+                    <p>Get Networking</p>
+                    <p>Attend the keynote event!</p>
                 </div>
-                <div class="biz-card-body">
-                    <img href="">
-                    <div class="biz-card-info">
-                        <p>Email:</p>
-                        <p>Phone:</p>
-                        <p>URL:</p>
+                <button id="hero-button">Get Keynote Tickets</button>
+            </section>
+            <section id="home" class="page-theme">
+                <h1>Home</h1>
+                <div id="home-content">
+                    <div class="proCard home-card f1">
+                        <h2 class="proCard-head">Events</h2>
+                        <ul>
+                            <li>Event 1</li>
+                            <li>Event 2</li>
+                            <li>Event 3</li>
+                        </ul>
+                    </div>
+                    <div class="proCard home-card f2">
+                        <h2 class="proCard-head">Current Weather</h2>
+
+                    </div>
+                    <div class="proCard home-card f3">
+                        <h2 class="proCard-head">Weather Forecast</h2>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section id="business-cards" class="flex">
+                <div>
+                    <div id="promo-cards" class="cards flex">
+                        <!-- <div class="card cardStyle flex">
+                            <div class="promoCardhead flex">
+                                <h2>Charleston Cycles</h2>
+                                <p>Ride in Style</p>
+                                <hr>
+                            </div>
+                            <div class="promoCardContent flex">
+                                <div class="flex"><img
+                                        src="https://images.unsplash.com/photo-1567070694401-dd52d7b46429?q=80&amp;w=2680&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Image of Charleston Cycles" width="150px" loading="lazy"></div>
+                                <div class="flex">
+                                    <p>Email: support@charlestoncycles.com</p>
+                                    <p>Phone 555-243-5757</p><a href="https://charlestoncycles.com">URL:
+                                        https://charlestoncycles.com</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
 
     </main>
-
+    <footer id="footer" class="flex">
+        <span id="footer-address">
+            <address> King St. Charleston, SC</address>
+        </span>
+        <span id="footer-media"></span>
+        <span id="footer-site-info">
+            <p>David Valentine</p>
+        </span>
+    </footer>
 
 </body>
 

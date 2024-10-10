@@ -172,9 +172,6 @@ hamburger.addEventListener('click', (event) => {
             menu.classList.add('hide');
             break;
     }
-
-
-
 });
 
 
