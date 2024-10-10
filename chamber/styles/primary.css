@@ -138,6 +138,12 @@ HSDOCOIJH42Et {
 #footer {
     background-color: var(--primary-color);
 }
+#footer 
+
+#footer .flex {
+    justify-content:center;
+    align-items: space-evenly;
+}
 
 #footer span {
     justify-content: space-evenly;
