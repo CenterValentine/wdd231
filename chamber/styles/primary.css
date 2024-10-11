@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-HSDOCOIJH42Et {
+/* HSDOCOIJH42Et {
     color: #02111B;
     color: #3F4045;
     color: #30292F;
@@ -18,7 +18,7 @@ HSDOCOIJH42Et {
     color: #85C7F2;
     color: #636363;
     color: #4C4C4C;
-}
+} */
 
 :root {
     --primary-color: #02111B;
@@ -39,10 +39,6 @@ HSDOCOIJH42Et {
     color: var(--primary-font-color)
 }
 
-/* 
-#content * {
-    color: var(--secondary-color);
-} */
 
 #content {
     display: flex;
@@ -145,10 +141,6 @@ HSDOCOIJH42Et {
     gap: 0rem;
 }
 
-#footer div {
-    /* justify-content: center; */
-    /* align-items: baseline; */
-}
 #footer-address{
     padding: 1rem;
     font-size: medium;
@@ -162,9 +154,6 @@ HSDOCOIJH42Et {
     padding: 1rem;
 }
 
-#footer-address br {
-    
-}
 #footer-site-info {
     flex-direction: column;
     padding: 1rem;
@@ -172,9 +161,6 @@ HSDOCOIJH42Et {
     align-items: center; */
 }
 
-#footer-site-info .flex {
-
-}
 
 #footer-site-info p {
     padding-bottom: .25rem;
@@ -273,13 +259,6 @@ a {
 
 
 
-#business-cards {
-    /* width: 80vw; */
-
-    /* margin: auto; */
-}
-
-
 .cards {
     flex-direction: row;
 
@@ -329,31 +308,6 @@ a {
     /* padding: 1rem; */
 }
 
-/* 
-#business-cards .flex {
-    align-items: stretch;
-    /* justify-content: center; */
-/* justify-content: flex-start; */
-/* flex-basis: 50%; 
-}
-
-#promo-cards .flex  {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    /* flex-basis: 100%; */
-/* margin-left: 10rem; 
-}
-
-#promo-cards .card .flex div {
-    flex-direction: column;
-}
-
-#promo-cards > div:nth-child(1) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-} */
-
 #business-cards .cardStyle {
     background-color: var(--secondary-color);
     padding: 1rem;
@@ -376,9 +330,6 @@ a {
 .cardStyle div:nth-child(2) {
     padding-left: 1vw;
 }
-
-.cardStyle:hover {}
-
 
 
 #home-content {
@@ -510,9 +461,3 @@ address {
     display: none;
     /* line-height: 60px; */
 }
-
-
-/* 
-.hide {
-    display: unset;
-} */

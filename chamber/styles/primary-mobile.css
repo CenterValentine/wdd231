@@ -24,13 +24,6 @@
 
 
 @media screen and (max-width: 450px) {
-    /* .hide {
-        display: none;
-    } */
-
-    .grid {
-        /* margin-right: 7rem; */
-    }
 
     #hamburger {
         color: var(--sample-color);
@@ -69,7 +62,5 @@
     #brand {
         width: 100%;
     }
-
-    .grid {}
 
 }
