@@ -3,7 +3,7 @@ const cards = document.querySelector('#cards');
 const toggleSwitch = document.getElementById('toggleSwitch');
 
 async function getJSONData() {
-    const response = await fetch('/chamber/data/members.json');
+    const response = await fetch('chamber/data/members.json');
 
     const data = await response.json();
     console.table(data.businesses);
