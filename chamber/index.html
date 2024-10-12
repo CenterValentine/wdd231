@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +16,16 @@
     <!-- A short description or summary of the object. [Between 2 and 4 sentences.] -->
     <meta property="twitter:description" content="Helping community and business unite.">
     <!--  It should be at least 600×315 pixels, but 1200×630 or larger is preferred (up to 5MB). Stay close to a 1.91:1 aspect ratio to avoid cropping. -->
-    <meta property="twitter:image" content="https://centervalentine.github.io/wdd231/chamber/images/networking2.jpeg" >
-    <meta property="twitter:card" content="This is it" >
+    <meta property="twitter:image" content="https://centervalentine.github.io/wdd231/chamber/images/networking2.jpeg">
+    <meta property="twitter:card" content="This is it">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/primary.css">
     <link rel="stylesheet" href="styles/primary-mobile.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/home.css">
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/home.js" defer></script>
+    <script src="scripts/home-weather.js" defer></script>
 </head>
 
 <body>
@@ -66,19 +69,45 @@
                     <div class="proCard home-card f1">
                         <h2 class="proCard-head">Events</h2>
                         <ul>
-                            <li>Event 1</li>
-                            <li>Event 2</li>
-                            <li>Event 3</li>
+                            <li><b>Business Networking Luncheon:</b> <br>Nov. 1st<br> Connect with local business owners to explore partnership opportunities & exchange ideas!</li>
+                            <li><b>Community Workshop Series: </b><br>Nov. 5th<br>Upcoming workshops hosted by The Bean Hub and Bayside Blooms.<br> Gain new insights into local industries and business practices.</li>
+                            <li><b>Relocation Seminar: </b><br>Nov. 8th<br>Learn more about Charleston's thriving business environment, featuring tech and gourmet food industries.</li>
                         </ul>
                     </div>
-                    <div class="proCard home-card f2">
+                    <div class="proCard home-card f2 current-weather-card">
                         <h2 class="proCard-head">Current Weather</h2>
+                        <div id="current-weather-card-content" class="flex">
+                            <div id="weather-icon-contianer">
+                                <img id='weather-icon' src="https://openweathermap.org/img/wn/01d.png"
+                                    alt="Weather Icon" width="100px">
+                            </div>
+                            <div id="weather-text-content">
+                                <div id="temp">Temp: <span>unavailable</span></div>
+                                <div id="weatherConditions">Conditions: unavailable</div>
+                                <div id="tempHigh">High: unavailable</div>
+                                <div id="tempLow">Low: unavailable</div>
+                                <div id="humidity">Humidity: unavailable</div>
+                                <div id="sunrise">Sunrise: unavailable</div>
+                                <div id="sunset">Sunset: unavailable</div>
+                            </div>
+                        </div>
 
                     </div>
                     <div class="proCard home-card f3">
                         <h2 class="proCard-head">Weather Forecast</h2>
+                        <div id="forecast-text-content" class="flex">
+                            <div id=day1>
+                                <p>Today: unavailable</p>
+                            </div>
+                            <div id=day2>
+                                <p>Tomorrow: unavailable</p>
+                            </div>
+                            <div id=day3>
+                                Following: unavailable
+                            </div>
+                        </div>
                     </div>
-                </div>
+
             </section>
             <section id="business-cards" class="flex">
                 <div>

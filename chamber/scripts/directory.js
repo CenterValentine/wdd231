@@ -17,7 +17,8 @@ async function displaybusinesses(directory) {
         const card = document.createElement('div');
 
         const businessName = document.createElement('h2');
-        const industry = document.createElement('p');
+        const businessNameDiv = document.createElement('div');
+        const catchphrase = document.createElement('p');
         const address = document.createElement('address');
         const phone = document.createElement('p');
         const bizImage = document.createElement('img');
@@ -30,7 +31,7 @@ async function displaybusinesses(directory) {
         website.textContent = `Visit Website (${directory.website})`;
 
         businessName.textContent = `${directory.name}`;
-        industry.textContent = `${directory.industry}`;
+        catchphrase.textContent = `${directory.catchphrase}`;
         address.textContent = `${directory.address}`;
         phone.textContent = `${directory.phone}`;
 
@@ -41,15 +42,15 @@ async function displaybusinesses(directory) {
         bizImage.setAttribute('loading', 'lazy');
 
         card.setAttribute('class', 'card home-card flex')
-        industry.setAttribute('class', 'industry');
+        catchphrase.setAttribute('class', 'industry');
         phone.setAttribute('class', 'phone');
         // anchor.setAttribute('class', 'website');
         businessSpecs.setAttribute('class', 'toggler')
 
         // website.appendChild(anchor);
-
-        businessSpecs.append(industry, address, phone, bizImage, pageBreak, website)
-        card.append(businessName, businessSpecs);
+        businessNameDiv.appendChild(businessName);
+        businessSpecs.append(catchphrase, address, phone, bizImage, pageBreak, website)
+        card.append(businessNameDiv, businessSpecs);
         cards.appendChild(card);
     });
 }
