@@ -32,3 +32,9 @@
     padding: .25rem 3rem;
     text-wrap:nowrap;
 }
+
+
+#hero > img{
+    /* background-color: rgb(205, 205, 2) ; */
+    width: 100%;
+}

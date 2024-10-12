@@ -2,8 +2,11 @@
 // https://api.openweathermap.org/data/2.5/forecast?lat=49.75&lon=6.64&appid=c227cf622f8c509b0a729e4764d1295f
 // id list temp, weatherConditions, tempHigh, tempLow, humidity, sunrise, sunset
 
-const longitude = 6.64;
-const latitude = 49.75;
+
+// 32.791473403431624, -80.0416506709279
+
+const longitude = -80.0416506709279;
+const latitude = 32.791473403431624;
 
 async function getWeatherData() {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=c227cf622f8c509b0a729e4764d1295f`);
