@@ -1,10 +1,11 @@
 
 filters = document.querySelector('#filters');
 
-cards = document.querySelector('#certificates-course-boxes');
-numberOfCreditsItem = document.querySelector('#numberOfCredits');
-hamburger = document.querySelector('#hamburger')
+let cards = document.querySelector('#certificates-course-boxes');
+let numberOfCreditsItem = document.querySelector('#numberOfCredits');
+let hamburger = document.querySelector('#hamburger')
 let menu = document.querySelector('#menu')
+
 
 
 const courses = [
@@ -90,6 +91,19 @@ const courses = [
 
 loadCourses();
 
+// dialogClose.addEventListener('click', (event) => {
+//     dialog.close();
+// });
+let coursecards = document.querySelectorAll('.course.card-Completed');
+
+coursecards.forEach(dialog => {
+
+    dialog.addEventListener('click', (event) => {
+    console.log('event: ', event);
+    console.log('event.target: ', event.target);
+    event.target.querySelector('dialog').showModal();
+    
+})});
 
 function updateNumberOfCredits(countedCredits) {
     console.log('Updating count: ', countedCredits)
@@ -100,12 +114,55 @@ function loadCourses(event) {
     let numberOfCredits = 0;
     console.log("event: ", event);
     courses.forEach(course => {
-        let card = document.createElement('div')
+        let card = document.createElement('div');
+        let dialog = document.createElement('dialog');
+        dialog.setAttribute('class', `${course.subject}-${course.number} dialog`);
+
+        let dialogHeader = document.createElement('div');
+        let dialogHeaderTitle = document.createElement('h2');
+        let dialogContent = document.createElement('div');
+
+        let dialogTitle = document.createElement('h3');
+        let dialogCredits = document.createElement('p');
+        let dialogCertificate = document.createElement('p');
+        let dialogDescription = document.createElement('p');
+        let dialogTechnology = document.createElement('p');
+        let dialogClose = document.createElement('button');
+
+        dialogHeaderTitle.textContent = `${course.subject} ${course.number}`;
+        dialogHeaderTitle.setAttribute('class', 'dialog-header');
+    
+        dialogContent.setAttribute('class', 'dialog-content');
+    
+        dialogTitle.textContent = `${course.title}`;
+        dialogTitle.setAttribute('class', 'dialog-title');
+    
+        dialogCredits.textContent = `Credits: ${course.credits}`;
+        dialogCredits.setAttribute('class', 'dialog-credits');
+    
+        dialogCertificate.textContent = `Certificate: ${course.certificate}`;
+        dialogCertificate.setAttribute('class', 'dialog-certificate');
+    
+        dialogDescription.textContent = `Description: ${course.description}`;
+        dialogDescription.setAttribute('class', 'dialog-description');
+    
+        dialogTechnology.textContent = `Technology: ${course.technology.join(', ')}`;
+        dialogTechnology.setAttribute('class', 'dialog-technology');
+
+        dialogClose.textContent = 'x';
+        dialogClose.setAttribute('class', 'close');
+
+        dialogHeader.append(dialogHeaderTitle);
+        dialogContent.append(dialogTitle, dialogCredits, dialogCertificate, dialogDescription, dialogTechnology, dialogClose);
+        dialog.append(dialogHeader, dialogContent);
+        
+
         // console.log(card);
         numberOfCredits += course.credits;
-        console.log()
+
         card.setAttribute('data-course-credits', course.credits);
-        card.textContent = `${course.subject} ${course.number}`;
+        card.append(`${course.subject} ${course.number}`,dialog);
+
         if (course.completed) {
             card.setAttribute('class', 'course card-Completed');
         }
@@ -116,6 +173,8 @@ function loadCourses(event) {
     });
     updateNumberOfCredits(numberOfCredits);
 };
+
+
 
 function refreshCourses(id) {
     let numberOfCredits = 0;
@@ -158,6 +217,8 @@ function refreshCourses(id) {
 filters.addEventListener('click', (event) => {
     refreshCourses(event.target.textContent)
 });
+
+
 
 hamburger.addEventListener('click', (event) => {
 
