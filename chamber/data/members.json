@@ -3,7 +3,7 @@
   
     {
       "name": "Domo Arrigato",
-      "catchphrase": "Unforgettable Japanese Cuisine",
+      "catchphrase": "Japanese Cuisine, You're Welcome!",
       "email": "domo@arrigato.food",
       "address": "12 Samuri Way, Charleston, SC 29401",
       "phone": "555-238-8329",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Tech Savannah",
-      "catchphrase": "Tech Solutions for the Modern World",
+      "catchphrase": "Tech Solutions for humans",
       "email": "service@techsavannah.com",
       "address": "45 Silicon Ave., Charleston, SC 29401",
       "phone": "555-240-2045",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Bayside Blooms",
-      "catchphrase": "Flowers for Every Occasion",
+      "catchphrase": "Real Flower Power",
       "email": "flowerpower@baysideblooms.com",
       "address": "321 Floral St., Charleston, SC 29401",
       "phone": "555-241-8320",
@@ -68,10 +68,10 @@
       "membership": 2
     },
     {
-      "name": "Charleston Cycles",
-      "catchphrase": "Ride in Style",
+      "name": "The Bike Cycle",
+      "catchphrase": "Its the cycle of life",
       "email": "support@charlestoncycles.com",
-      "address": "57 Pedal Dr., Charleston, SC 29401",
+      "address": "Armstrong Lane Charleston, SC 29405",
       "phone": "555-243-5757",
       "industry": "Bicycle Shop",
       "website": "https://charlestoncycles.com",
@@ -93,7 +93,7 @@
       "name": "Mr. Magoo's Shoe Shop",
       "catchphrase": "Shoes for your soul",
       "email": "mrmagoo@magoosshoes.com",
-      "address": "2 Shoe Lp . Charleston, SC 29405",
+      "address": "2 Shoe Lp Charleston, SC 29405",
       "phone":"555-239-5892",
       "industry": "Shoes",
       "website": "https://magoosshoes.shop",
@@ -104,7 +104,7 @@
       "name": "The Judgement Bar",
       "catchphrase": "Real Fitness for weaklings",
       "email": "fit@thejudgementbar.fitness",
-      "address": "Armstrong Way . Charleston, SC 29405",
+      "address": "Armstrong Lane Charleston, SC 29405",
       "phone":"555-239-5892",
       "industry": "Fitness & Wellness",
       "website": "https://thejudgementbar.fitness",
@@ -113,9 +113,9 @@
     },
     {
       "name": "Crack Chiropractic",
-      "catchphrase": "Step on a crack, feel better",
+      "catchphrase": "Step on a crack and come back.",
       "email": "support@crackback.com",
-      "address": "2 Soar Bach. Charleston, SC 29405",
+      "address": "2 Soar Bach Way Charleston, SC 29405",
       "phone":"555-239-5892", 
       "industry": "Health & Wellness",
       "website": "https://crackback.com",
