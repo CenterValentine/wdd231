@@ -248,18 +248,16 @@
 }
 
 
-
-#thank-you a, #join-button {
+.cplan {
     transform: scale(1); 
-    transition: .5s;
+    transition: ease-in 2s;
+
 }
 
-
-#thank-you a:hover,  #join-button:hover{
+.cplan:hover {
     transform: scale(1.05);
-    transition: .5s;
+    transition: ease-out 2s;
     text-decoration: solid;
-    
 }
 
 

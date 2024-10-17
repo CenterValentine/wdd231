@@ -511,3 +511,19 @@ address {
     display: none;
     /* line-height: 60px; */
 }
+
+
+
+
+#thank-you a, #join-button, #hero-button, #menu-list li, #brand, .card{
+    transform: scale(1); 
+    transition: ease-in .4s;
+}
+
+
+#thank-you a:hover,  #join-button:hover, #hero-button:hover,  #menu-list li:hover, #brand:hover, .card:hover {
+    transform: scale(1.05);
+    transition: ease-in .4s;
+    text-decoration: solid;
+    
+}

@@ -27,13 +27,6 @@
     min-height: 330px;
 }
 
-.card:hover {
-    /* width: 300px; */
-    box-shadow: 9px 9px 9px rgb(186, 179, 179);
-    position:relative;
-    align-items: center;
-}
-
 
 .card p,
 .card address,
