@@ -38,11 +38,11 @@
             <nav id="navigation" class="flex">
                 <p id="hamburger" class="hide">≡</p>
                 <div id="menu" class="hide">
-                    <ul id="menu-list" class="menu-list  flex">
+                    <ul id="menu-list" class="menu-list flex">
                         <li><a href="index.html" title="Home" class="active">Home</a></li>
                         <li><a href="directory.html" title="Directory">Directory</a></li>
-                        <li><a href="#" title="Join">Join</a></li>
-                        <li><a href="#" title="Discover">Discover</a></li>
+                        <li><a href="join.html" title="Join">Join</a></li>
+                        <li><a href="discovery.html" title="Discover">Discover</a></li>
                     </ul>
                 </div>
                 <!-- <button id="menu-button">&#9776</button> -->
@@ -54,62 +54,164 @@
         <div id="form-page" class="flex">
 
             <section id="membership-application" class="flex">
-                <form id="join-form" class="flex">
-                    <legend>Join the Chamber of Commerce</legend>
-                    <label>First Name:
+                <form action="thankyou.html" method="get" id="join-form" class="flex">
+                    <legend>Join Voyáge <br> Chamber of Commerce</legend>
+                    <label>
+                        <div>First Name:</div>
                         <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                     </label>
                     <label>
-                        Last Name:
+                        <div>Last Name:</div>
                         <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
                     </label>
                     <label>
-                        Title:
+                        <div>Title:</div>
                         <input type="organization-title" id="organization-title" name="organization-title"
                             placeholder="Organization Title" required>
                     </label>
                     <label>
-                        Email:
+                        <div>Email:</div>
                         <input type="email" id="email" name="email" placeholder="Email Address" required>
                     </label>
                     <label>
-                        Mobile Phone:
+                        <div>Mobile Phone:</div>
                         <input type="tel" id="phone" name="phone" placeholder="Mobile Phone Number" required>
                     </label>
                     <label>
-                        Business/Organization Name:
-                        <input type="text" id="org-name" name="org-name" placeholder="Business/Organization Name"
-                            required>
+                        <div>Business/Org. Name:</div>
+                        <input type="text" id="org-name" name="org-name" placeholder="Business/Org. Name" required>
                     </label>
-                    <!-- NP Membership is for non profit organizations and there is no fee. -->
-                    <label>NP Membership
-                        <input type="radio" id="membership-type" name="membership-type" value="NP" required>
-                    </label>
-                    <label for="Bronze">Bronze Membership
-                        <input type="radio" id="membership-type" name="membership-type" value="Bronze" required>
-                    </label>
-                    <label for="Silver">Silver Membership
-                        <input type="radio" id="membership-type" name="membership-type" value="Silver" required>
-                    </label>
-                    <label for="Gold">Gold Membership
-                        <input type="radio" id="membership-type" name="membership-type" value="Gold" required>
-                    </label>
-                    <label>
+                    <label id="organization-description-label">
+                        <div>Business Organization Description:</div>
                         <textarea id="organization-description" name="organization-description"
                             placeholder="Business/Organization Description" required></textarea>
                     </label>
 
+                    <div id="radio-selection">
+                        <div>Choose Membership:</div>
+                        <label for="NP"
+                            class="radio"><!-- NP Membership is for non profit organizations and there is no fee. -->
+                            <div class="radio">
+                                <input type="radio" id="membership-type" name="membership-type" value="NP" required>
+                                NP Membership
+                            </div>
+                        </label>
+                        <label for="Bronze" class="radio">
+                            <div class="radio">
+                                <input type="radio" id="membership-type" name="membership-type" value="Bronze" required>
+                                Bronze Membership
+                            </div>
+                        </label>
+                        <label for="Silver" class="radio">
+                            <div class="radio">
+                                <input type="radio" id="membership-type" name="membership-type" value="Silver" required>
+                                Silver Membership
+                            </div>
+                        </label>
+                        <label for="Gold" class="radio">
+                            <div class="radio">
+                                <input type="radio" id="membership-type" name="membership-type" value="Gold" required>
+                                Gold Membership
+                            </div>
+                        </label>
+                    </div>
+                    <!-- current time -->
+                    <input type="hidden" class="hidden" id="timestamp" name="timestamp" value="">
+
+                    <button id="join-button" type="submit">Send Application</button>
                 </form>
-                <button id="join-button" type="submit"></button>
+            </section>
+
+
             </section>
             <section id="membership-info" class="flex">
-                <div>Membership Gold</div>
-                <div>Membership Silver</div>
-                <div>Membership Bronze</div>
-                <div>Membership NP</div>
+                <div class="flex cplan" onclick="openModal('goldModal')">
+                    <h2>Membership Gold:</h2>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="flex cplan" onclick="openModal('silverModal')">
+                    <h2>Membership Silver:</h2>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="flex cplan" onclick="openModal('bronzeModal')">
+                    <h2>Membership Bronze:</h2>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="flex cplan" onclick="openModal('npModal')">
+                    <h2>Membership NP:</h2>
+                    <a href="#">Learn More</a>
+                </div>
             </section>
         </div>
+
+
+        <!-- Gold Membership Modal -->
+        <dialog id="goldModal" class="modal">
+            <div class="modal-header">Gold Membership Benefits</div>
+            <hr>
+            <div class="modal-body">
+                <ul>
+                    <li>Spotlight position on the homepage</li>
+                    <li>Free entry to all special events</li>
+                    <li>Priority advertising opportunities</li>
+                    <li>Training sessions with local industry leaders</li>
+                    <li>Exclusive discounts on business services</li>
+                    <li>10% event discount for employees</li>
+                </ul>
+            </div>
+            <button class="modal-close" onclick="closeModal('goldModal')">Close</button>
+        </dialog>
+
+        <!-- Silver Membership Modal -->
+        <dialog id="silverModal" class="modal">
+            <div class="modal-header">Silver Membership Benefits</div>
+            <hr>
+            <div class="modal-body">
+                <ul>
+                    <li>Feature in monthly newsletter</li>
+                    <li>Discounted entry to special events</li>
+                    <li>Networking events with chamber members</li>
+                    <li>5% event discount for employees</li>
+                    <li>Access to exclusive member content</li>
+                </ul>
+            </div>
+            <button class="modal-close" onclick="closeModal('silverModal')">Close</button>
+        </dialog>
+
+        <!-- Bronze Membership Modal -->
+        <dialog id="bronzeModal" class="modal">
+            <div class="modal-header">Bronze Membership Benefits</div>
+            <hr>
+            <div class="modal-body">
+                <ul>
+                    <li>Discounts on chamber-hosted events</li>
+                    <li>Access to member-only workshops</li>
+                    <li>Listing in the chamber directory</li>
+                    <li>Networking opportunities</li>
+                </ul>
+            </div>
+            <button class="modal-close" onclick="closeModal('bronzeModal')">Close</button>
+        </dialog>
+
+        <!-- NP Membership Modal -->
+        <dialog id="npModal" class="modal">
+            <div class="modal-header">NP Membership Benefits</div>
+            <hr>
+            <div class="modal-body">
+                <ul>
+                    <li>Access to community networking events</li>
+                    <li>Inclusion in member directory</li>
+                    <li>Exclusive local business news</li>
+                    <li>Discount on select events</li>
+                </ul>
+            </div>
+            <button class="modal-close" onclick="closeModal('npModal')">Close</button>
+        </dialog>
+
     </main>
+
+
+
     <footer id="footer" class="flex">
         <div id="footer-address">
             <p><b>Voyage Chamber of Commerce</b><br>1234 King St.<br> Charleston, SC
@@ -129,6 +231,9 @@
                 <img src="images/socialmedia/in.svg" alt="linked in profile" width="33">
             </div>
         </div>
+
+
+
         <div id="footer-site-info" class="flex">
             <p>WDD231 Class Project</p>
 
@@ -136,6 +241,7 @@
         </div>
     </footer>
     <script src="scripts/getdates.js" defer></script>
+
 
 </body>
 

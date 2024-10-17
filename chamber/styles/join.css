@@ -1,31 +1,434 @@
-#form-page{
+#form-page {
     /* flex-direction: column; */
-    justify-content: space-around;
+    /* justify-content: ; */
     width: 90%;
-    align-items: stretch;
+    align-items: flex-start;
     height: 100%;
-    background-color: var(--accent-color);
+    gap: 0rem;
     margin: auto;
+    flex-wrap: nowrap;
 }
 
 #membership-info {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: stretch;
+    justify-content: flex-start;
+    /* width: 45%; */
+    /* margin: 1rem 0; */
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
+
+
+#membership-info>div {
+    margin: 1rem 0;
+    padding: 3.75rem 12rem;
+    background-color: var(--accent-color);
+    border-top-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#membership-info .flex {
+    flex-direction: column;
+    gap: .95rem;
+}
+
+#membership-info .flex a {
+    padding: .5rem .8rem;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+#membership-application {
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: var(--accent-color);
+    margin: 2rem 2rem;
+    padding: 0rem 0rem 0rem 2rem;
+    border-radius: 4px;
 }
 
 #join-form {
     flex-direction: column;
     color: var(--primary-color);
-    /* justify-self: flex-start; */
-    
+    justify-self: flex-start;
+    align-items: flex-start;
+
+    color: var(--secondary-color);
+    margin: 2rem;
+}
+
+#join-form legend {
+    color: var(--primary-font-color);
+    /* align-self: center; */
+    /* justify-self: center; */
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+
+
+#join-form>label>div {
+    margin: .55rem 0;
+
+}
+
+
+#radio-selection label {
+    padding: 1rem 0;
+}
+
+#radio-selection>div {
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: large;
+}
+
+#radio-selection>label div {
+    margin: .75rem 0;
+}
+
+#join-form label {
+    margin: .25rem 0;
+}
+
+#join-form input {
+
+    border-radius: 4px;
+    border: none;
+    padding: .5rem;
+}
+
+/* 
+#join-form input::placeholder {
+    margin-left: 5px;
+} */
+
+#join-form button {
+    margin: 1rem;
+    padding: .75rem .5rem;
+    background-color: var(--primary-font-color);
+    color: var(--primary-color);
+}
+
+#organizational-description-label {
     align-self: flex-end;
+    /* justify-self: stretch; */
 }
 
-form {
+#join-form textarea {
+    width: 80%;
+    height: 70px;
+    box-sizing: border-box;
+    align-self: flex-start;
+}
+
+#join-form input {
     color: var(--secondary-color);
 }
 
-input {
-    color: var(--secondary-color);
+.modal * {
+    color: var(--accent-color);
+}
+
+.modal {
+
+    position: fixed;
+    top: 30%;
+    left: 48%;
+    background-color: var(--primary-font-color);
+    z-index: 1000;
+    padding: 3rem;
+    border: var(--primary-color) solid 1px;
+
+    border-radius: 4px;
+
+
+}
+
+.modal>div:nth-child(1) {
+    font-size: 1.7rem;
+}
+
+.modal ul {
+    padding: 1rem 2rem;
+}
+
+.modal li {
+    list-style: disc;
+    /* list-style-image: ; */
+    margin: 0 1rem;
+    padding: 0rem;
+
+}
+
+.modal button {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin: 1rem;
+}
+
+#membership-info>div.flex {
+    /* flex-direction: row; */
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
+
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+
+
+.flex.cplan:nth-child(1):hover {
+    background-color: var(--gold-color) !important;
+}
+
+.flex.cplan:nth-child(2):hover {
+    background-color: var(--silver-color) !important;
+}
+
+.flex.cplan:nth-child(3):hover {
+    background-color: var(--bronze-color) !important;
+}
+
+.flex.cplan:nth-child(4):hover {
+    background-color: var(--primary-color) !important;
+}
+
+
+
+.cplan:nth-child(1) {
+    animation-delay: 6.3s;
+    animation-duration: 2s;
+    animation-name: gold;
+    transition: background-color 0.5s ease; 
+} 
+
+.cplan:nth-child(2) {
+    animation-delay: 4.2s;
+    animation-duration: 2s;
+    animation-name: silver;
+    transition: background-color 0.5s ease; 
+
+}
+
+
+.cplan:nth-child(3) {
+    animation-delay: 2.1s;
+    animation-duration: 2s;
+    animation-name: bronze;
+    transition: background-color 0.5s ease; 
+}
+
+
+.cplan:nth-child(4) {
+    animation-duration: 2s;
+    animation-name: colorchange;
+    transition: background-color 0.5s ease; 
+    /* animation-iteration-count: 2; */
+}
+
+:root{
+    --bronze-color: #cd7f32;
+    --silver-color: #c0c0c0;
+    --gold-color: #ffbb00;
+
+
+}
+
+
+
+#thank-you a, #join-button {
+    transform: scale(1); 
+    transition: .5s;
+}
+
+
+#thank-you a:hover,  #join-button:hover{
+    transform: scale(1.05);
+    transition: .5s;
+    text-decoration: solid;
+    
+}
+
+
+@keyframes bronze {
+    0% {
+        background-color: var(--accent-color);
+    }
+
+    50% {
+        background-color: var(--bronze-color);
+    }
+
+    100% {
+        background-color: var(--accent-color);
+    }
+}
+
+@keyframes silver {
+    0% {
+        background-color: var(--accent-color);
+    }
+
+    50% {
+        background-color: var(--silver-color);
+    }
+
+    100% {
+        background-color: var(--accent-color);
+    }
+}
+
+@keyframes gold {
+    0% {
+        background-color: var(--accent-color);
+    }
+
+    50% {
+        background-color: var(--gold-color);
+    }
+
+    100% {
+        background-color: var(--accent-color);
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        background-color: var(--accent-color);
+    }
+
+    50% {
+        background-color: var(--primary-color);
+    }
+
+    100% {
+        background-color: var(--accent-color);
+    }
+}
+
+
+
+
+
+#thank-you {
+    background-color: var(--accent-color);
+    flex-direction: column;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 6px;
+    
+}
+
+#thank-you a {
+    align-self:center;
+    margin-right: 3rem;
+    padding: .5rem 1rem;
+    background-color: var(--primary-font-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+}
+
+
+#thank-you h1 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+#thank-you #results {
+    margin: 2rem;
+
+}
+
+#results p {
+    margin: .25rem;
+}
+
+
+@media screen and (max-width: 999px) {
+
+    #form-page {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #join-form {
+        margin: unset;
+        /* width: 100%; */
+    }
+
+    #membership-application {
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #membership-info {
+        align-items: center;
+        justify-content: center;
+        /* padding: 1rem; */
+    }
+
+
+    #membership-application form {
+        /* flex-direction: row;
+     */
+        flex-wrap: nowrap;
+        width: 60%;
+        align-self: center;
+        justify-self: center;
+        /* margin: auto; */
+        padding: 0 5rem;
+    }
+
+    #membership-info>div.flex {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 40%;
+        /* margin-bottom: 1vw; */
+    }
+
+    #membership-info>div {
+        padding:unset;
+        padding-left: 18vw;
+        padding-right: 18vw;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+
+    }
+
+#membership-info h2 {
+    font-size: 1rem;
+}
+
+#membership-info a{
+    font-size: .75rem;
+}
+
+
+    .modal {
+        position: fixed;
+        top: unset;
+        left: unset;
+        /* left: 25%; */
+        /* bottom: 20%; */
+        /* right: 25%; */
+        width: 50%;
+        margin: 20vw;
+    }
+
 }
