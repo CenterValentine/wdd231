@@ -1,3 +1,9 @@
+fieldset {
+    border: none;
+    padding: 0; 
+    margin: 0;
+}
+
 #form-page {
     /* flex-direction: column; */
     /* justify-content: ; */
@@ -48,6 +54,11 @@
     margin: 2rem 2rem;
     padding: 0rem 0rem 0rem 2rem;
     border-radius: 4px;
+
+}
+
+#membership-application h1 {
+    font-size: 1.5rem;
 }
 
 #join-form {
@@ -69,16 +80,37 @@
     margin: 1rem;
 }
 
-
-
-#join-form>label>div {
-    margin: .55rem 0;
-
+#join-form>label {
+    display: flex;
+    flex-direction: column;
 }
 
+#join-form>label>span{
+    margin: .4rem 0;
+    /* line-height: 25px; */
+}
+/* 
+#radio-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin: 1rem 
+    
+} */
+
+#radio-selection > div {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    gap: 0rem;
+    margin: 0rem;
+}
 
 #radio-selection label {
-    padding: 1rem 0;
+    padding: .4rem 0;
+    display: block;
+    margin: 0; 
+
 }
 
 #radio-selection>div {
@@ -87,7 +119,7 @@
     font-size: large;
 }
 
-#radio-selection>label div {
+#radio-selection>div>label span {
     margin: .75rem 0;
 }
 
@@ -118,6 +150,8 @@
     align-self: flex-end;
     /* justify-self: stretch; */
 }
+
+
 
 #join-form textarea {
     width: 80%;

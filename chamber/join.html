@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +23,10 @@
     <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/join.js" defer></script>
-
 </head>
-
 <body>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <header>
         <div id="header" class="flex">
             <div id="brand" class="grid">
@@ -55,78 +54,87 @@
 
             <section id="membership-application" class="flex">
                 <form action="thankyou.html" method="get" id="join-form" class="flex">
-                    <legend>Join Voyáge <br> Chamber of Commerce</legend>
+
+                    <h1>Join Voyáge
+                        <br> Chamber of Commerce
+                    </h1>
                     <label>
-                        <div>First Name:</div>
+                        <span>First Name:</span>
                         <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                     </label>
                     <label>
-                        <div>Last Name:</div>
+                        <span>Last Name:</span>
                         <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
                     </label>
                     <label>
-                        <div>Title:</div>
-                        <input type="organization-title" id="organization-title" name="organization-title"
+                        <span>Title:</span>
+                        <input type="text" id="organization-title" name="organization-title"
                             placeholder="Organization Title" required>
                     </label>
                     <label>
-                        <div>Email:</div>
+                        <span>Email:</span>
                         <input type="email" id="email" name="email" placeholder="Email Address" required>
                     </label>
                     <label>
-                        <div>Mobile Phone:</div>
+                        <span>Mobile Phone:</span>
                         <input type="tel" id="phone" name="phone" placeholder="Mobile Phone Number" required>
                     </label>
                     <label>
-                        <div>Business/Org. Name:</div>
+                        <span>Business/Org. Name:</span>
                         <input type="text" id="org-name" name="org-name" placeholder="Business/Org. Name" required>
                     </label>
                     <label id="organization-description-label">
-                        <div>Business Organization Description:</div>
+                        <span>Business Organization Description:</span>
                         <textarea id="organization-description" name="organization-description"
                             placeholder="Business/Organization Description" required></textarea>
                     </label>
 
                     <div id="radio-selection">
                         <div>Choose Membership:</div>
-                        <label for="NP"
-                            class="radio"><!-- NP Membership is for non profit organizations and there is no fee. -->
-                            <div class="radio">
-                                <input type="radio" id="membership-type" name="membership-type" value="NP" required>
-                                NP Membership
-                            </div>
-                        </label>
-                        <label for="Bronze" class="radio">
-                            <div class="radio">
-                                <input type="radio" id="membership-type" name="membership-type" value="Bronze" required>
-                                Bronze Membership
-                            </div>
-                        </label>
-                        <label for="Silver" class="radio">
-                            <div class="radio">
-                                <input type="radio" id="membership-type" name="membership-type" value="Silver" required>
-                                Silver Membership
-                            </div>
-                        </label>
-                        <label for="Gold" class="radio">
-                            <div class="radio">
-                                <input type="radio" id="membership-type" name="membership-type" value="Gold" required>
-                                Gold Membership
-                            </div>
-                        </label>
+                        <div>
+                            <label for="NP"
+                                class="radio"><!-- NP Membership is for non profit organizations and there is no fee. -->
+                                <span class="radio">
+                                    <input type="radio" id="np" for="membership-type" name="membership-type" value="NP"
+                                        required>
+                                    NP Membership
+                                </span>
+                            </label>
+                            <label for="Bronze" class="radio">
+                                <span class="radio">
+                                    <input type="radio" id="bronze" for="membership-type" name="membership-type"
+                                        value="Bronze" required>
+                                    Bronze Membership
+                                </span>
+                            </label>
+                            <label for="Silver" class="radio">
+                                <span class="radio">
+                                    <input type="radio" id="silver" for="membership-type" name="membership-type"
+                                        value="Silver" required>
+                                    Silver Membership
+                                </span>
+                            </label>
+                            <label for="Gold" class="radio">
+                                <span class="radio">
+                                    <input type="radio" id="gold" for="membership-type" name="membership-type"
+                                        value="Gold" required>
+                                    Gold Membership
+                                </span>
+                            </label>
+                        </div>
                     </div>
                     <!-- current time -->
                     <input type="hidden" class="hidden" id="timestamp" name="timestamp" value="">
-
+                    </fieldset>
                     <button id="join-button" type="submit">Send Application</button>
                 </form>
             </section>
 
 
-            </section>
+
             <section id="membership-info" class="flex">
                 <div class="flex cplan" onclick="openModal('goldModal')">
-                    <h2>Membership Gold:  $149 /mo</h2>
+                    <h2>Membership Gold: $149 /mo</h2>
                     <a href="#">Learn More</a>
                 </div>
                 <div class="flex cplan" onclick="openModal('silverModal')">
@@ -209,8 +217,6 @@
         </dialog>
 
     </main>
-
-
 
     <footer id="footer" class="flex">
         <div id="footer-address">
