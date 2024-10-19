@@ -541,9 +541,8 @@ address {
 #sidebar-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 3fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
     gap: 1rem 1rem;
-
     margin: 1rem .5rem;
 }
 
@@ -551,4 +550,12 @@ address {
 #photo-container {
     flex-direction: column;
     margin: 1rem .5rem;
+}
+
+
+#photo-container caption {
+    font-size: small;
+    padding: .5rem;
+    color: var(--secondary-color);
+    z-index: 999;
 }
