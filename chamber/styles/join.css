@@ -124,6 +124,7 @@
     height: 70px;
     box-sizing: border-box;
     align-self: flex-start;
+    color: black ;
 }
 
 #join-form input {
