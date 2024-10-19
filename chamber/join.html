@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +25,8 @@
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/join.js" defer></script>
 </head>
+
 <body>
-    <script src="scripts/menu.js" defer></script>
-    <script src="scripts/join.js" defer></script>
     <header>
         <div id="header" class="flex">
             <div id="brand" class="grid">
@@ -92,17 +92,17 @@
                     <div id="radio-selection">
                         <div>Choose Membership:</div>
                         <div>
-                            <label for="NP"
+                            <label for="np"
                                 class="radio"><!-- NP Membership is for non profit organizations and there is no fee. -->
                                 <span class="radio">
-                                    <input type="radio" id="np" for="membership-type" name="membership-type" value="NP"
+                                    <input type="radio" id="np" name="membership-type" value="NP"
                                         required>
                                     NP Membership
                                 </span>
                             </label>
                             <label for="Bronze" class="radio">
                                 <span class="radio">
-                                    <input type="radio" id="bronze" for="membership-type" name="membership-type"
+                                    <input type="radio" id="bronze" for="bronze" name="membership-type"
                                         value="Bronze" required>
                                     Bronze Membership
                                 </span>
@@ -125,12 +125,10 @@
                     </div>
                     <!-- current time -->
                     <input type="hidden" class="hidden" id="timestamp" name="timestamp" value="">
-                    </fieldset>
+
                     <button id="join-button" type="submit">Send Application</button>
                 </form>
             </section>
-
-
 
             <section id="membership-info" class="flex">
                 <div class="flex cplan" onclick="openModal('goldModal')">
@@ -233,7 +231,7 @@
             <div>
                 <img src="images/socialmedia/x.svg" alt="X Profile" width="35">
             </div>
-            <div alt="LinkedIn Profile">
+            <div>
                 <img src="images/socialmedia/in.svg" alt="linked in profile" width="33">
             </div>
         </div>
