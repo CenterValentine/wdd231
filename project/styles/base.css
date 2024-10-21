@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* HSDOCOIJH42Et {
+    color: #02111B;
+    color: #3F4045;
+    color: #30292F;
+    color: #5D737E;
+    color: #5D737E;
+
+
+    color: #FCFCFC;
+
+    color: #D1D1D1;
+    color: #DBDBDB;
+    color: #85C7F2;
+    color: #636363;
+    color: #4C4C4C;
+} */
+
+:root {
+    --primary-color: #02111B;
+    --secondary-color: #787b83;
+    --accent-color: #564754;
+    --main-font: 'Manrope';
+    --secondary-font: 'open sans';
+    --primary-font-color: #FCFCFC;
+    --accent-font-color: #D1D1D1;
+    --secondary-font-color: #5d737eda;
+    --secondary-transparent-font-color: hsla(200, 15%, 43%, 0.668);
+    --goofy-color1: #f1e900;
+    --goofy-color2: #10bd0a;
+}
+
+* {
+    margin: 0;
+    font-family: var(--main-font);
+    color: var(--primary-font-color)
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* min-height: 90vw; */
+    /* color: var(--goofy-color1); */
+    width: 100%;
+    /* position: relative; */
+}
+
+h1 {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+h4 {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+h5 {
+    font-family: var(--secondary-font);
+    font-size: .75rem;
+    padding: 1rem;
+}
+
+h6 {
+    font-family: var(--secondary-font);
+    font-size: .5rem;
+    padding: 1rem;
+}
+
+#hamburger:hover {
+    background-color: var(--secondary-color);
+}
+
+#header,
+#footer {
+    background-color: var(--primary-color);
+}
+
+#footer {
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0rem;
+}
+
+#footer-address {
+    padding: 1rem;
+    font-size: medium;
+}
+
+#footer-media {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+#footer-site-info {
+    flex-direction: column;
+    padding: 1rem;
+    /* justify-content: flex-start;
+    align-items: center; */
+}
+
+#footer-site-info p {
+    padding-bottom: .25rem;
+}
+
+#directory-options .home-card.flex {
+    justify-content: center;
+    align-items: center;
+}
+
+#directory-options h2 {
+    margin-left: 1rem;
+    text-align: start;
+    align-self: center;
+    justify-self: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-decoration: none;
+    padding: 1.15rem 1.5rem;
+}
+
+#menu-list li:hover {
+    background-color: var(--secondary-color);
+}
+
+#menu-button {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#directory-options *,
+.page-theme>h1 {
+    color: var(--secondary-font-color);
+
+}
+
+#brand {
+    flex-direction: column;
+    min-height: 10vh;
+    text-wrap: nowrap;
+}
+
+#horizontal-logo {
+    margin: 0;
+    padding-bottom: .3rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+
+#brand {
+    gap: 0;
+    justify-self: flex-start;
+}
+
+#brand img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: end;
+    /* margin: 15px; */
+}
+
+#brand #horizontal-logo {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+#brand #logo-description {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#logo {
+    padding-right: 3rem;
+}
+
+#footer {
+    min-height: 10vh;
+}
+
+.card {
+
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
+
+
+
+.grid-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.grid-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+#directory-options p {
+    padding: .5rem;
+
+}
+
+#directory-options p>span {
+    font-size: 2rem;
+}
+
+input:checked+.slider {
+    background-color: #b3b4b5;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #b3b4b5;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.page-theme h1,
+.page-theme .cards {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+address {
+    font-size: medium;
+}
+
+#hamburger {
+    cursor: pointer;
+    display: none;
+    /* line-height: 60px; */
+}
+
+
+#thank-you a,
+#join-button,
+#hero-button,
+#menu-list li,
+#brand,
+.card {
+    transform: scale(1);
+    transition: ease-in .4s;
+}
+
+
+#thank-you a:hover,
+#join-button:hover,
+#hero-button:hover,
+#menu-list li:hover,
+#brand:hover,
+.card:hover {
+    transform: scale(1.05);
+    transition: ease-in .4s;
+    text-decoration: solid;
+
+}
+
+#promo-cards .card.cardStyle.flex .promoCardContent.flex .flex p,
+#discover-container p {
+    /* overflow-wrap: break-word; */
+    font-size: small;
+    padding: .3rem;
+}

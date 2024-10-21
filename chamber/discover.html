@@ -51,105 +51,131 @@
 
         </div>
     </header>
-    <main>
-        <div id="discover-container" class="flex">
-            <div id="sidebar-container">
-                <div id="event-container" class="cardStyle">
-                    <div id="event-header" class="header">
-                        <h2>Upcoming Events</h2>
-                        <hr>
+    <main id="discover" class="flex">
+        <div>
+            <div id="discover-container" class="flex">
+                <div id="sidebar-container">
+                    <div id="event-container" class="newCardStyle">
+                        <div id="event-header" class="header">
+                            <h2>Upcoming Events</h2>
+                            <hr>
+                        </div>
+                        <div id="event-content" class="content">
+                            <ul>
+                                <h3>Nov. 25th</h3>
+                                <h4>Networking Event</h4>
+                                <p>Join us for our monthly networking event in November. Meet other business owners and
+                                community leaders. </p>
+                                <h3>Dec. 5th</h3>
+                                <h4>Business Expo</h4>
+                                <p>Our annual business expo is a great way to showcase your business to the community. </p>
+                                <h3>Dec. 7th</h3>
+                                <h4>Chamber Luncheon</h4>
+                                <p>Join us for our monthly luncheon. Meet other business owners and community leaders. </p>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="event-content" class="content">
-                        <h3>Networking Event</h3>
-                        <p>Join us for our monthly networking event in November. Meet other business owners and
-                            community leaders. </p>
-                        <h3>Business Expo</h3>
-                        <p>Our annual business expo is a great way to showcase your business to the community. </p>
-                        <h3>Chamber Luncheon</h3>
-                        <p>Join us for our monthly luncheon. Meet other business owners and community leaders. </p>
+                    <div id="demographic-container" class="newCardStyle content">
+                        <div id="demographic-header">
+                            <h2>Demographics</h2>
+                            <hr>
+                        </div>
+                        <div id="demographic-content">
+                            <h3>About us</h3>
+                            <p>Our community is made up of a diverse group of people. We have a population of 50,000
+                                people.
+                            </p>
+                            <h3>Business Expo</h3>
+                            <p>Our annual business expo is a great way to showcase your business to the community. </p>
+                            <h3>Chamber Luncheon</h3>
+                            <p>Join us for our monthly luncheon. Meet other business owners and community leaders. </p>
+                        </div>
+                    </div>
+                    <div id="attractions-container" class="newCardStyle">
+                        <div id="attractions-header" class="header">
+                            <h2>Local Attractions</h2>
+                            <hr>
+                        </div>
+                        <div id="attractions-content">
+                            <h3>Things to do:</h3>
+                            <ul>
+                                <li>Visit the local museum</li>
+                                <li>Take a walk on the beach</li>
+                                <li>Visit the local shops</li>
+                                <li>Enjoy the local restaurants</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="calendar-container" class="newCardStyle">
+                        <div id="calendar-header" class="header">
+                            <h2>Calendar</h2>
+                            <hr>
+                            <p id="calendar-date"></p>
+                        </div>
+                        <div id="calendar-content" class="content">
+                            <!-- embed calendar -->
+                            <iframe
+                                src="https://calendar.google.com/calendar/embed?src=centervalentine%40gmail.com&ctz=America%2FDenver"
+                                style="border: 0" width="400" height="300" frameborder="0" scrolling="yes"></iframe>
+                        </div>
                     </div>
                 </div>
-                <div id="demographic-container" class="cardStyle content">
-                    <div id="demographic-header">
-                        <h2>Demographics</h2>
-                        <hr>
-                    </div>
-                    <div id="demographic-content">
-                        <h3>About us</h3>
-                        <p>Our community is made up of a diverse group of people. We have a population of 50,000 people.
-                        </p>
-                        <h3>Business Expo</h3>
-                        <p>Our annual business expo is a great way to showcase your business to the community. </p>
-                        <h3>Chamber Luncheon</h3>
-                        <p>Join us for our monthly luncheon. Meet other business owners and community leaders. </p>
-                    </div>
-                </div>
-                <div id="attractions-container" class="cardStyle">
-                    <div id="attractions-header" class="header">
-                        <h2>Local Attractions</h2>
-                        <hr>
-                    </div>
-                    <div id="attractions-content">
-                        <h3>Things to do:</h3>
-                        <ul>
-                            <li>Visit the local museum</li>
-                            <li>Take a walk on the beach</li>
-                            <li>Visit the local shops</li>
-                            <li>Enjoy the local restaurants</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="calendar-container" class="cardStyle">
-                    <div id="calendar-header" class="header">
-                        <h2>Calendar</h2>
-                        <hr>
-                        <p id="calendar-date"></p>
-                    </div>
-                    <div id="calendar-content" class="content">
-                        <!-- embed calendar -->
-                        <iframe
-                            src="https://calendar.google.com/calendar/embed?src=centervalentine%40gmail.com&ctz=America%2FDenver"
-                            style="border: 0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
-                    </div>
-                </div>
-            </div>
 
 
-            <div id="photo-container" class="flex">
-                <div>
-                    <picture class="flex">
-                        <source media="(min-width: 800px)" srcset="images/networking2.jpeg">
-                        <img src="images/networking2.jpeg" alt="Networking Event" width="700">
-                    </picture>
+                <div id="photo-container" class="flex">
+                    <div class="flex">
+                        <picture class="">
+                            <source media="(min-width: 800px)" srcset="images/networking2.jpeg">
+                            <img src="images/networking2.jpeg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">Our 2024 Networking Shinanagin</figcaption>
+                    </div>
+                    <div class="flex">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/bactivity2.jpg">
+                            <img src="images/bactivity2.jpg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">Our newest member's store front</figcaption>
 
-                    <caption class="caption">Networking Event</caption>
+                    </div>
+                    <div class="flex">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/bactivity3.jpg">
+                            <img src="images/bactivity3.jpg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">The October 2024 town expos</figcaption>
+                    </div>
+                    <div class="flex">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/bactivity10.jpg">
+                            <img src="images/bactivity10.jpg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">Two commerce members strike a deal!</figcaption>
+
+                    </div>
+                    <div class="flex">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/bactivity9.jpg">
+                            <img src="images/bactivity9.jpg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">Saturday evening market fair</figcaption>
+                    </div>
+                    <div class="flex">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/bactivity8.jpg">
+                            <img src="images/bactivity8.jpg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">Cornwallace meeting agenda discussion</figcaption>
+                    </div>
+                    <div class="flex">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/bactivity7.jpg">
+                            <img src="images/bactivity7.jpg" alt="Networking Event" width="900">
+                        </picture>
+                        <figcaption class="figcaption">Bob's Apples first international shipment</figcaption>
+                    </div>
+
                 </div>
-                <picture>
-                    <source media="(min-width: 800px)" srcset="images/networking3.jpeg">
-                    <img src="images/networking3.jpeg" alt="Networking Event" width="700">
-                </picture>
-                <caption class="caption">Community</caption>
-                <picture>
-                    <source media="(min-width: 800px)" srcset="images/networking4.jpeg">
-                    <img src="images/networking4.jpeg" alt="Networking Event" width="700">
-                </picture>
-                <caption class="caption">People</caption>
-                <picture>
-                    <source media="(min-width: 800px)" srcset="images/networking5.jpeg">
-                    <img src="images/networking5.jpeg" alt="Networking Event" width="700">
-                </picture class="caption">
-                <caption>Opportunties</caption>
-                <picture>
-                    <source media="(min-width: 800px)" srcset="images/networking6.jpeg">
-                    <img src="images/networking6.jpeg" alt="Networking Event" width="700">
-                </picture>
-                <caption class="caption">Culture</caption>
-                <picture>
-                    <source media="(min-width: 800px)" srcset="images/networking7.jpeg">
-                    <img src="images/networking7.jpeg" alt="Networking Event" width="700">
-                </picture>
-                <caption class="caption">Dedication</caption>
-
             </div>
         </div>
 
