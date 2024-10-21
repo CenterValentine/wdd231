@@ -2,9 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-#site-plan {
-
+#site-plan{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
+
+
+#site-plan-container {
+    width: 100%;
+}
+
+#site-plan-container > section {
+    margin: .5rem;
+    max-width: 250px;
+}
+
+
+
+#wireframes {
+    width: 100%;
+    text-align: center;
+}
+
 /* HSDOCOIJH42Et {
     color: #02111B;
     color: #3F4045;
@@ -45,38 +67,48 @@
     color: var(--primary-font-color)
 }
 
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+    flex-wrap: nowrap;
+}
+
 h1 {
     margin: 0;
     font-family: var(--secondary-font);
-    font-size: 2rem;
-    padding: .25rem;
+    font-size: 1.5rem;
+    text-align: center;
+    
 }
 
 h2 {
-    margin: 0;
-    font-family: var(--secondary-font);
-    font-size: 1.5rem;
-    padding: 1rem;
-}
-
-h3 {
     margin: 0;
     font-family: var(--secondary-font);
     font-size: 1.25rem;
     padding: 1rem;
 }
 
-h4 {
+h3 {
     margin: 0;
     font-family: var(--secondary-font);
     font-size: 1rem;
     padding: 1rem;
 }
 
-h5 {
+h4 {
     margin: 0;
     font-family: var(--secondary-font);
     font-size: .75rem;
+    padding: 1rem;
+}
+
+h5 {
+    margin: 0;
+    font-family: var(--secondary-font);
+    font-size: .5rem;
     padding: 1rem;
 }
 
@@ -86,6 +118,9 @@ h6 {
     font-size: .5rem;
     padding: 1rem;
 }
+
+
+
 
 #hamburger:hover {
     background-color: var(--secondary-color);
@@ -165,15 +200,8 @@ a {
     padding-bottom: .3rem;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: row; */
-    flex-wrap: nowrap;
-}
 
-div > .site-plan.flex {
+div > .site-plan-container.flex {
     /* justify-content: space-around; */
 }
 
@@ -225,8 +253,6 @@ div > .site-plan.flex {
     min-height: 10vh;
 }
 
-
-
 button {
     border-radius: 8px;
     border: none;
@@ -248,7 +274,6 @@ button {
     height: 0;
 
 }
-
 
 
 address {
@@ -277,15 +302,20 @@ address {
 
 }
 
-
 .theme-header {
     background-color: var(--header-background-color);
     color: var(--primary-color);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    padding: .65rem;
 }
 
 .theme-content {
     background-color: var(--background-color);
     color: var(--background-color);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: .85rem;
 }
 
 
