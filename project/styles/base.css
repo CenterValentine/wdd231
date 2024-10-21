@@ -34,6 +34,7 @@
     --goofy-color2: #10bd0a;
 
     --background-color: #3db5d0;
+    --header-background-color: #0062ff;
 }
 
 * {
@@ -276,7 +277,15 @@ address {
     padding: .3rem;
 }
 
-.theme {
-    background-color: var(--background-color);
+
+.theme-header {
+    background-color: var(--header-background-color);
     color: var(--primary-color);
 }
+
+.theme-content {
+    background-color: var(--background-color);
+    color: var(--background-color);
+}
+
+
