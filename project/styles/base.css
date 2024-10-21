@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+#site-plan {
 
+}
 /* HSDOCOIJH42Et {
     color: #02111B;
     color: #3F4045;
@@ -43,49 +45,43 @@
     color: var(--primary-font-color)
 }
 
-
-#content {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* min-height: 90vw; */
-    /* color: var(--goofy-color1); */
-    width: 100%;
-    /* position: relative; */
-}
-
 h1 {
+    margin: 0;
     font-family: var(--secondary-font);
     font-size: 2rem;
-    padding: 1rem;
+    padding: .25rem;
 }
 
 h2 {
+    margin: 0;
     font-family: var(--secondary-font);
     font-size: 1.5rem;
     padding: 1rem;
 }
 
 h3 {
+    margin: 0;
     font-family: var(--secondary-font);
     font-size: 1.25rem;
     padding: 1rem;
 }
 
 h4 {
+    margin: 0;
     font-family: var(--secondary-font);
     font-size: 1rem;
     padding: 1rem;
 }
 
 h5 {
+    margin: 0;
     font-family: var(--secondary-font);
     font-size: .75rem;
     padding: 1rem;
 }
 
 h6 {
+    margin: 0;
     font-family: var(--secondary-font);
     font-size: .5rem;
     padding: 1rem;
@@ -174,7 +170,20 @@ a {
     justify-content: center;
     align-items: center;
     /* flex-direction: row; */
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+
+div > .site-plan.flex {
+    /* justify-content: space-around; */
+}
+
+
+.flexc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .grid {
@@ -216,9 +225,7 @@ a {
     min-height: 10vh;
 }
 
-.card {
 
-}
 
 button {
     border-radius: 8px;
@@ -268,13 +275,6 @@ address {
     transition: ease-in .4s;
     text-decoration: solid;
 
-}
-
-#promo-cards .card.cardStyle.flex .promoCardContent.flex .flex p,
-#discover-container p {
-    /* overflow-wrap: break-word; */
-    font-size: small;
-    padding: .3rem;
 }
 
 
