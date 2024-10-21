@@ -32,6 +32,8 @@
     --secondary-transparent-font-color: hsla(200, 15%, 43%, 0.668);
     --goofy-color1: #f1e900;
     --goofy-color2: #10bd0a;
+
+    --background-color: #3db5d0;
 }
 
 * {
@@ -274,6 +276,7 @@ address {
     padding: .3rem;
 }
 
-theme {
+.theme {
+    background-color: var(--background-color);
     color: var(--primary-color);
 }
