@@ -31,4 +31,3 @@ window.addEventListener('load', function (event) {
     //     discoverMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
     // }
 });
-

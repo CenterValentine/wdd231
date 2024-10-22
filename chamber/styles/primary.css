@@ -598,7 +598,7 @@ address {
     flex-direction: column;
     margin: 1rem .5rem;
     align-items: flex-start;
-    flex: 2 1 2;
+    /* flex: 2 1 2; */
 }
 
 

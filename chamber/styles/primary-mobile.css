@@ -83,7 +83,7 @@
     flex-direction: column;
 }
 
-#photo-container > div img {
+#photo-container > figure img {
     width: 75vw;
     height: 40vw;
     /* stretch */
