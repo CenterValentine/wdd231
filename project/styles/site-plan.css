@@ -116,7 +116,7 @@ margin-top: 10px;
     } */
     
     .background-scroll-effect{
-        background-image: url('/project/images/drift-background.jpeg');
+        background-image: url('../images/drift-background.jpeg');
         /* background-image-size */
         background-position:top;
         background-size: 1700px auto;
