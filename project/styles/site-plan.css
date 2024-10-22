@@ -1,0 +1,28 @@
+
+
+#site-plan{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+
+#site-plan-container {
+    width: 100%;
+}
+
+#site-plan-container > section {
+    margin: .5rem;
+    max-width: 250px;
+}
+
+
+
+#wireframes {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 850px) {}

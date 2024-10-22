@@ -1,39 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* change to mobile at 770 */
 
-#site-plan{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: flex-start;
-    flex-wrap: nowrap;
+/* CSS HEX */
+
+
+/* CSS HSL */
+/* --floral-white: hsla(60, 53%, 97%, 1);
+--platinum: hsla(90, 4%, 90%, 1);
+--timberwolf: hsla(96, 5%, 81%, 1);
+--silver: hsla(0, 2%, 64%, 1);
+--taupe-gray: hsla(352, 6%, 49%, 1); */
+
+/* SCSS HEX */
+/* $floral-white: #fbfbf2ff;
+$platinum: #e5e6e4ff;
+$timberwolf: #cfd2cdff;
+$silver: #a6a2a2ff;
+$taupe-gray: #847577ff; */
+
+/* SCSS HSL */
+/* $floral-white: hsla(60, 53%, 97%, 1);
+$platinum: hsla(90, 4%, 90%, 1);
+$timberwolf: hsla(96, 5%, 81%, 1);
+$silver: hsla(0, 2%, 64%, 1);
+$taupe-gray: hsla(352, 6%, 49%, 1); */
+
+/* SCSS RGB */
+/* $floral-white: rgba(251, 251, 242, 1);
+$platinum: rgba(229, 230, 228, 1);
+$timberwolf: rgba(207, 210, 205, 1);
+$silver: rgba(166, 162, 162, 1);
+$taupe-gray: rgba(132, 117, 119, 1); */
+
+/* SCSS Gradient */
+/* $gradient-top: linear-gradient(0deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-right: linear-gradient(90deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-bottom: linear-gradient(180deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-left: linear-gradient(270deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-top-right: linear-gradient(45deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-bottom-right: linear-gradient(135deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-top-left: linear-gradient(225deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-bottom-left: linear-gradient(315deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
+$gradient-radial: radial-gradient(#fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff); */
+
+.system-fonts {
+    font-family: Afacad Flux, Karla, Raleway, sans-serif;
 }
 
-
-#site-plan-container {
-    width: 100%;
-}
-
-#site-plan-container > section {
-    margin: .5rem;
-    max-width: 250px;
-}
-
-
-
-#wireframes {
-    width: 100%;
-    text-align: center;
-}
-
-/* HSDOCOIJH42Et {
+HSDOCOIJH42Et {
     color: #02111B;
     color: #3F4045;
     color: #30292F;
     color: #5D737E;
     color: #5D737E;
 
+   
 
     color: #FCFCFC;
 
@@ -42,29 +68,32 @@
     color: #85C7F2;
     color: #636363;
     color: #4C4C4C;
-} */
+}
 
 :root {
-    --primary-color: #02111B;
-    --secondary-color: #787b83;
-    --accent-color: #564754;
-    --main-font: 'Manrope';
-    --secondary-font: 'open sans';
-    --primary-font-color: #FCFCFC;
-    --accent-font-color: #D1D1D1;
-    --secondary-font-color: #5d737eda;
+    --primary-color: #daddd8;
+    --secondary-color: #1F61A4;
+    --accent-color: #B87333;
+    --main-font: 'Afacad Flux';
+    --secondary-font: 'Karla';
+    --primary-font-color: #daddd8;
+    --accent-font-color: #1F61A4;
+    --background-color: #daddd8;
+    --header-background-color: #155C85ff;
+
+
+    --secondary-font-color: #daddd8;
     --secondary-transparent-font-color: hsla(200, 15%, 43%, 0.668);
     --goofy-color1: #f1e900;
     --goofy-color2: #10bd0a;
 
-    --background-color: #3db5d0;
-    --header-background-color: #0062ff;
+    
 }
 
 * {
     margin: 0;
     font-family: var(--main-font);
-    color: var(--primary-font-color)
+
 }
 
 
@@ -183,12 +212,6 @@ a {
     text-decoration: none;
 }
 
-#directory-options *,
-.page-theme>h1 {
-    color: var(--secondary-font-color);
-
-}
-
 #brand {
     flex-direction: column;
     min-height: 10vh;
@@ -198,11 +221,6 @@ a {
 #horizontal-logo {
     margin: 0;
     padding-bottom: .3rem;
-}
-
-
-div > .site-plan-container.flex {
-    /* justify-content: space-around; */
 }
 
 
@@ -304,7 +322,7 @@ address {
 
 .theme-header {
     background-color: var(--header-background-color);
-    color: var(--primary-color);
+    color: var(--primary-font-color);
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     padding: .65rem;
@@ -312,7 +330,7 @@ address {
 
 .theme-content {
     background-color: var(--background-color);
-    color: var(--background-color);
+    color: var(--accent-font-color);
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     padding: .85rem;
