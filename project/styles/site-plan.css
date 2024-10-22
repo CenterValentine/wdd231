@@ -62,14 +62,11 @@ margin-top: 10px;
 }
 
 
-
 #wireframes {
     width: 100%;
     text-align: center;
     border-left: 0 solid var(--secondary-color);
 }
-
-
 
 @media screen and (min-width: 770px) {
 
@@ -110,7 +107,6 @@ margin-top: 10px;
     #site-plan-container .theme-content {
         background-color: var(--primary-soft-color-transparent);
         border: 1px none;
-
     }
     /* 
     #header.scrolled {
@@ -122,7 +118,6 @@ margin-top: 10px;
     .background-scroll-effect{
         background-image: url('/project/images/drift-background.jpeg');
         /* background-image-size */
-
         background-position:top;
         background-size: 1700px auto;
         background-repeat: no-repeat;
