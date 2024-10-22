@@ -361,7 +361,7 @@ color: #ffffff;
 .theme-content {
     background-color: var(--primary-soft-color);
     color: var(--primary-font-color);
-    padding: .9vwr;
+    padding: 10px;
     
 }
 
