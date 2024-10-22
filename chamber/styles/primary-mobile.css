@@ -37,6 +37,61 @@
         width: 90%;
         margin: 1rem;
     }
+
+#photo-container .figcaption {
+    font-size: medium;
+    padding: 1rem 1rem;
+    position: relative;
+    background-color: unset;
+    color: var(--primary-color);
+
+}
+
+
+
+#discover-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+.newCardStyle:not(#calendar-container) {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    width: 80vw;
+    border-radius: 2px;
+}
+
+#calendar-container {
+ width: 100%;
+
+}
+
+#calendar-content {
+    
+    align-self: center;
+    justify-self: center;
+}
+
+#calendar-content iframe{
+    max-width: unset !important;
+    width: 500px;
+}
+
+#photo-container > div {
+    flex-direction: column;
+}
+
+#photo-container > div img {
+    width: 75vw;
+    height: 40vw;
+    /* stretch */
+    object-fit: stretch;
+}
+
+
+
 }
 
 @media screen and (max-width: 500px) {
@@ -154,6 +209,13 @@
 
     
 }
+
+
+#calendar-content iframe{
+    max-width: unset !important;
+    width: 300px;
+}
+
 
 
 }

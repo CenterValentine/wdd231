@@ -322,8 +322,6 @@ address {
     /* border-color: var(--hard-color); */
     color: var(--primary-soft-color);
     background-color: transparent;
-    /* border-top-right-radius: 3px; */
-    /* border-top-left-radius: 3px; */
     font-size: 2vw;
     padding: 1vw;
     padding-right: 2vw;

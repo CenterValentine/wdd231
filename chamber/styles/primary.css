@@ -3,22 +3,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-/* HSDOCOIJH42Et {
-    color: #02111B;
-    color: #3F4045;
-    color: #30292F;
-    color: #5D737E;
-    color: #5D737E;
 
 
-    color: #FCFCFC;
 
-    color: #D1D1D1;
-    color: #DBDBDB;
-    color: #85C7F2;
-    color: #636363;
-    color: #4C4C4C;
-} */
+@keyframes colorchange2 {
+    0% {
+        color: var(--accent-color);
+
+    }
+
+    25% {
+        color: var(--primary-color);
+    }
+
+    50% {
+        color: var(--accent-font-color);
+    }
+
+    75% {
+        color: var(--secondary-color);
+    }
+
+    100% {
+        color: var(--accent-color);
+    }
+}
+
+.discover-greeting{
+    /* color: var(--primary-color); */
+    /* font-size: 5rem; */
+    margin-top: 1rem;
+    text-align: center;
+    /* animation */
+    animation: colorchange2 2s infinite;
+    
+}
+
 
 :root {
     --primary-color: #02111B;
@@ -612,13 +632,13 @@ address {
 }
 
 
-.newCardStyle:not(#calendar-container) {
+.newCardStyle{
     background-color: var(--secondary-color);
     padding: 1rem;
     width: 30vw;
     border-radius: 2px;
+    
 }
-
 
 #calendar-container {
     padding:0;
@@ -627,8 +647,20 @@ address {
 }
 
 
-.newCardStyle
-
 #calendar-content iframe{
     max-width: 30vw;
+}
+
+
+
+@media screen and (min-width: 770px) {
+#photo-container img {
+    transition: ease-out .4s;
+
+}
+
+#photo-container img:hover {
+    transform: scale(1.05);
+
+}
 }
