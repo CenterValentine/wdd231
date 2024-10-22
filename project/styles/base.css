@@ -226,6 +226,7 @@ li {
 #brand #logo-description {
     grid-column: 2/3;
     grid-row: 2/3;
+    margin-left: .25rem;
     transition: ease-in 1s;
 }
 
@@ -286,7 +287,7 @@ address {
     cursor: pointer;
 }
 
-.book-now:hover {
+.book-now:hover, #header:hover .book-now{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-left: 3.93rem;
