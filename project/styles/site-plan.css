@@ -2,6 +2,7 @@
 :root {
     --primary-hard-color: #000000;
     --primary-soft-color: #daddd8;
+    --primary-soft-color-transparent: #daddd8ba;
     --primary-color: #ffffff;
     --secondary-color: #1F61A4;
     --accent-color: #DBAC80;
@@ -26,17 +27,6 @@
     /* width: 100%; */
 }
 
-/* 
-.background-scroll-effect {
-background: none;
-transition: background 0.4s ease;
-} */
-
-.background-scroll-effect.scrolled {
-    
-    
-}
-
 
 
 #site-plan-container {
@@ -47,13 +37,28 @@ transition: background 0.4s ease;
     margin: .5rem;
     max-width: 250px;
 }
-
+/* 
 #site-plan > div:first-child {
     margin: auto;
+} */
+
+#site-plan > div:first-child {
+margin-bottom: 14vw;
+max-width: 175px;
+margin-left: 30vw;
 }
 
+
+#site-plan > div:first-child > div > p{
+/* margin-top: 30px; */
+color: var(--primary-color);
+margin-left: 15px;
+margin-top: 10px;
+    }
+
 #site-plan > div:first-child > div:first-child {
-    margin-bottom: 135px;
+    
+    
 }
 
 
@@ -83,7 +88,7 @@ transition: background 0.4s ease;
 
     
     main {
-        padding-top: 300px; /* Adjust this value to match the header height */
+        padding-top: 200px; /* Adjust this value to match the header height */
     }
     
     #header:hover{
@@ -98,7 +103,15 @@ transition: background 0.4s ease;
         color: var(--primary-hard-color);
     }
     
-    
+    #site-plan-container {
+        margin-bottom: 10vw;
+    }
+
+    #site-plan-container .theme-content {
+        background-color: var(--primary-soft-color-transparent);
+        border: 1px none;
+
+    }
     /* 
     #header.scrolled {
         background: none;
@@ -111,7 +124,8 @@ transition: background 0.4s ease;
         /* background-image-size */
 
         background-position:top;
-        background-size: 700px auto;
+        background-size: 1700px auto;
+        background-repeat: no-repeat;
 
         z-index: 5;
     }

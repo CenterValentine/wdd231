@@ -6,73 +6,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* change to mobile at 770 */
 
-/* CSS HEX */
-
-
-/* CSS HSL */
-/* --floral-white: hsla(60, 53%, 97%, 1);
---platinum: hsla(90, 4%, 90%, 1);
---timberwolf: hsla(96, 5%, 81%, 1);
---silver: hsla(0, 2%, 64%, 1);
---taupe-gray: hsla(352, 6%, 49%, 1); */
-
-/* SCSS HEX */
-/* $floral-white: #fbfbf2ff;
-$platinum: #e5e6e4ff;
-$timberwolf: #cfd2cdff;
-$silver: #a6a2a2ff;
-$taupe-gray: #847577ff; */
-
-/* SCSS HSL */
-/* $floral-white: hsla(60, 53%, 97%, 1);
-$platinum: hsla(90, 4%, 90%, 1);
-$timberwolf: hsla(96, 5%, 81%, 1);
-$silver: hsla(0, 2%, 64%, 1);
-$taupe-gray: hsla(352, 6%, 49%, 1); */
-
-/* SCSS RGB */
-/* $floral-white: rgba(251, 251, 242, 1);
-$platinum: rgba(229, 230, 228, 1);
-$timberwolf: rgba(207, 210, 205, 1);
-$silver: rgba(166, 162, 162, 1);
-$taupe-gray: rgba(132, 117, 119, 1); */
-
-/* SCSS Gradient */
-/* $gradient-top: linear-gradient(0deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-right: linear-gradient(90deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-bottom: linear-gradient(180deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-left: linear-gradient(270deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-top-right: linear-gradient(45deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-bottom-right: linear-gradient(135deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-top-left: linear-gradient(225deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-bottom-left: linear-gradient(315deg, #fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff);
-$gradient-radial: radial-gradient(#fbfbf2ff, #e5e6e4ff, #cfd2cdff, #a6a2a2ff, #847577ff); */
 
 .system-fonts {
     font-family: Afacad Flux, Karla, Raleway, sans-serif;
 }
 
-HSDOCOIJH42Et {
-    color: #02111B;
-    color: #3F4045;
-    color: #30292F;
-    color: #5D737E;
-    color: #5D737E;
-
-   
-
-    color: #FCFCFC;
-
-    color: #D1D1D1;
-    color: #DBDBDB;
-    color: #85C7F2;
-    color: #636363;
-    color: #4C4C4C;
-}
-
 :root {
     --primary-hard-color: #000000;
     --primary-soft-color: #daddd8;
+    --primary-soft-color-transparent: #daddd8ba;
     --primary-color: #ffffff;
     --secondary-color: #1F61A4;
     --accent-color: #DBAC80;
@@ -105,6 +47,9 @@ HSDOCOIJH42Et {
 
 }
 
+p {
+    font-size: 1rem;
+}
 
 
 h1 {
@@ -163,6 +108,8 @@ ul {
 li {
     text-decoration: none;
     padding: 1.15rem 1.5rem;
+    /* underline */
+    /* text-decoration: underline; */
     /* color: var(--primary-font-color); */
 }
 
@@ -349,16 +296,19 @@ address {
     padding: .65rem;
 }
 
-.theme-header-reverse {
+.theme-hero-reverse {
     border: 1.5px solid var(--primary-soft-color);
     /* border-color: var(--hard-color); */
     color: var(--primary-soft-color);
     background-color: var(--color-primary);
     /* border-top-right-radius: 3px; */
     /* border-top-left-radius: 3px; */
-    padding: .65rem;
+    font-size: 2vw;
+    padding: 1vw;
+    padding-right: 2vw;
     text-align: center;
     width: 100%;
+    /* position:; */
 }
 
 .full {
@@ -375,9 +325,9 @@ address {
 
 
 .theme-content {
-    background-color: var(--primary-color);
+    background-color: var(--primary-soft-color);
     color: var(--primary-font-color);
-    padding: .85rem;
+    padding: .9vw;
     
 }
 
