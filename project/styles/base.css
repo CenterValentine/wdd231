@@ -226,6 +226,13 @@ li {
 #brand #logo-description {
     grid-column: 2/3;
     grid-row: 2/3;
+    transition: ease-in 1s;
+}
+
+#header:hover #brand #logo-description {
+
+    transform: translateX(3rem);
+    transition: ease-out 1s;
 }
 
 #logo {
