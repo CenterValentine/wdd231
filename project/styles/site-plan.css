@@ -1,4 +1,21 @@
 
+:root {
+    --primary-hard-color: #000000;
+    --primary-soft-color: #daddd8;
+    --primary-color: #ffffff;
+    --secondary-color: #1F61A4;
+    --accent-color: #DBAC80;
+    --main-font: 'Afacad Flux';
+    --secondary-font: 'Karla';
+    --primary-font-color: #000000;
+    --secondary-font-color: #daddd8;
+    --accent-font-color: #1F61A4;
+    --background-color: #daddd8;
+    --secondary-background-color: #1F61A4;
+    --header-background-color: #155C85ff;
+
+    
+}
 
 #site-plan{
     display: flex;
@@ -6,7 +23,20 @@
     /* justify-content: center; */
     align-items: flex-start;
     flex-wrap: nowrap;
+    /* width: 100%; */
 }
+
+/* 
+.background-scroll-effect {
+background: none;
+transition: background 0.4s ease;
+} */
+
+.background-scroll-effect.scrolled {
+    
+    
+}
+
 
 
 #site-plan-container {
@@ -18,11 +48,77 @@
     max-width: 250px;
 }
 
+#site-plan > div:first-child {
+    margin: auto;
+}
+
+#site-plan > div:first-child > div:first-child {
+    margin-bottom: 135px;
+}
+
 
 
 #wireframes {
     width: 100%;
     text-align: center;
+    border-left: 0 solid var(--secondary-color);
 }
 
-@media screen and (max-width: 850px) {}
+
+
+@media screen and (min-width: 770px) {
+
+    header {
+        position: fixed;
+        width: 100%;
+        background: transparent;
+        background-color: unset;
+        transition: background 1s ease;
+        z-index: 3;
+        color: var(--primary-color);
+
+        
+
+    }
+
+    
+    main {
+        padding-top: 300px; /* Adjust this value to match the header height */
+    }
+    
+    #header:hover{
+        background-color: var(--primary-color) !important;
+        color: var(--primary-hard-color);
+    }
+    
+    #header.scrolled {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        background: var(--primary-color);
+        background-color: var(--primary-color);
+        color: var(--primary-hard-color);
+    }
+    
+    
+    /* 
+    #header.scrolled {
+        background: none;
+        background-color: unset;
+    
+    } */
+    
+    .background-scroll-effect{
+        background-image: url('/project/images/drift-background.jpeg');
+        /* background-image-size */
+
+        background-position:top;
+        background-size: 700px auto;
+
+        z-index: 5;
+    }
+    
+}
+
+
+@media screen and (max-width: 850px) {
+
+}

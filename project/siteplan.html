@@ -22,24 +22,24 @@
     <link rel="stylesheet" href="styles/base-mobile.css">
     <link rel="stylesheet" href="styles/site-plan.css">
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
-<body>
-
-    <header>
+<body class="background-scroll-effect">
+    <header class="">
         <div id="header" class="flex">
-            <div id="brand" class="grid hover_theme">
+            <div id="brand" class="grid">
                 <img id="logo" src="images/logo.png" alt="Drift Inn Logo" height="65" loading="lazy">
                 <h1 id="horizontal-logo">Drift Inn</h1>
-                <p id="logo-description">Hostel and Suites</p>
+                <p id="logo-description">Hotel and Suites</p>
             </div>
             <nav id="navigation" class="flex">
                 <p id="hamburger" class="hide">≡</p>
                 <div id="menu" class="hide">
                     <ul id="menu-list" class="menu-list hover-theme flex">
-                        <li class="hover_theme"><a href="index.html" title="Home">Home</a></li>
-                        <li class="hover_theme"><a href="rooms.html" title="Rooms">Rooms</a></li>
-                        <li class="hover_theme"><a href="book.html" title="Book">Book</a></li>
-                        <li class="hover_theme"><a href="about-us.html" title="About Us">About Us</a></li>
+                        <li class="hover_theme1"><a href="index.html" title="Home">Home</a></li>
+                        <li class="hover_theme1"><a href="rooms.html" title="Rooms">Rooms</a></li>
+                        <li class="hover_theme1"><a href="book.html" title="Book">Book</a></li>
+                        <li class="hover_theme1"><a href="about-us.html" title="About Us">About Us</a></li>
                     </ul>
                 </div>
                 <!-- <button id="menu-button">&#9776</button> -->
@@ -47,17 +47,22 @@
         </div>
     </header>
     <main id="site-plan">
-        <div id="site-plan-container" class="site-plan flex">
+        <div class="">
+            <div class="">
+                <h1 class="theme-header-reverse">HELLO CHARLESTON</h1>
+            </div>
+        </div>
+        <div id="site-plan-container" class="site-plan  flex">
             <section class="">
-                <div class="theme-header">
+                <div class="theme-header hover_theme">
                     <h1>Site Name</h1>
                 </div>
-                <div class="theme-content">
+                <div class="theme-content hover_theme">
                     <p>Drift Inn Hotel Landing Page</p>
                 </div>
             </section>
             <section class="width-limit1">
-                <div class="theme-header">
+                <div class="theme-header hover_theme">
                     <h1>Site Purpose</h1>
                 </div>
                 <div class="theme-content">
@@ -65,7 +70,7 @@
                 </div>
             </section>
             <section class="width-limit2">
-                <div class="theme-header">
+                <div class="theme-header hover_theme">
                     <h1>Scenarios</h1>
                 </div>
                 <div class="theme-content">
@@ -75,7 +80,7 @@
                 </div>
             </section>
             <section class="">
-                <div class="theme-header">
+                <div class="theme-header hover_theme">
                     <h1>Color Schema</h1>
                 </div>
                 <div class="theme-content">
@@ -86,7 +91,7 @@
                 </div>
             </section>
             <section class="">
-                <div class="theme-header">
+                <div class="theme-header hover_theme">
                     <h1>Typography</h1>
                 </div>
                 <div class="theme-content system-fonts">
@@ -96,8 +101,8 @@
             </section>
         </div>
         <div id="wireframes">
-            <div class="theme-header">
-                <h1>Wireframes</h1>
+            <div class="theme-content full">
+                <h1 class="hover_theme">Wireframes</h1>
             </div>
             <div class="theme-content">
                 <img src="./images/siteplan1.png" alt="wireframe page 1">
@@ -106,7 +111,6 @@
             </div>
         </div>
     </main>
-
 
     <footer id="footer" class="flex">
         <div id="footer-address">
@@ -124,8 +128,6 @@
                 <img src="images/socialmedia/facebook.svg" alt="Facebook Profile" width="35">
             </div>
         </div>
-
-
 
         <div id="footer-site-info" class="flex">
             <p>WDD231 Class Project</p>

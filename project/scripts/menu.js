@@ -1,7 +1,6 @@
 let hamburger = document.querySelector('#hamburger')
 let menu = document.querySelector('#menu')
 
-
 if (hamburger && menu) {
     hamburger.addEventListener('click', (event) => {
         console.log("hamburger.textContent: ", hamburger.textContent)
@@ -15,10 +14,6 @@ if (hamburger && menu) {
                 menu.classList.add('hide');
                 break;
         }
-
-
-
-
 
     });
 }
