@@ -606,7 +606,7 @@ address {
     border-radius: 2px;
 }
 
-#photo-container div {
+#photo-container figure {
     position: relative;
 
     /* margin: .15rem; */
