@@ -100,6 +100,7 @@ h6 {
 a {
     text-decoration: none;
     color: inherit;
+    padding: 0 .6rem;
 }
 
 ul {
@@ -108,7 +109,7 @@ ul {
 
 li {
     text-decoration: none;
-    padding: 1.15rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     /* underline */
     /* text-decoration: underline; */
     /* color: var(--primary-font-color); */
@@ -166,10 +167,12 @@ li {
     padding-bottom: .25rem;
 }
 
-
-#menu-list li:hover {
-    background-color: var(--accent-color);
-    font: var(--secondary-font-color)
+#menu-list li:hover a {
+    border-bottom: 2px solid var(--accent-color);
+    /* background-color: var(--accent-color); */
+    font: var(--secondary-font-color);
+    z-index: 999;
+    
 }
 
 #menu-button {
@@ -179,61 +182,48 @@ li {
 
 #brand {
     flex-direction: column;
-    min-height: 10vh;
     text-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 0;
+    justify-self: flex-start;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
-
+/* 
 #horizontal-logo {
     margin: 0;
     padding-bottom: .3rem;
-}
+} */
 
-
-.flexc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-}
-
-
-#brand {
-    gap: 0;
-    justify-self: flex-start;
-}
 
 #brand img {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    align-self: center;
-    justify-self: end;
-    /* margin: 15px; */
+    /* grid-column: 1 /; */
+    grid-row: 1 / 2;
 }
-
+/* 
 #brand #horizontal-logo {
-    grid-column: 2/3;
-    grid-row: 1/3;
-}
+} */
 
 #brand #logo-description {
-    grid-column: 2/3;
     grid-row: 2/3;
-    margin-left: .25rem;
+    margin-left: 5rem;
+    margin-top: -30px;
+    color: transparent;
     transition: ease-in 1s;
+    /* position: absolute; */
+
+
 }
 
-#header:hover #brand #logo-description {
 
+#header:hover #brand #logo-description,#brand #logo-description.scrolled {
+    margin-left: 7rem;
+    color: var(--primary-hard-color);
     transform: translateX(3rem);
-    transition: ease-out 1s;
+    transition: ease-in-out .6s;
 }
 
 #logo {
@@ -250,20 +240,6 @@ button {
     padding: 8px;
 }
 
-.grid-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.grid-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-
 address {
     font-size: medium;
 }
@@ -275,25 +251,33 @@ address {
 }
 
 .book-now {
-    
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: .9rem;
-    /* border-radius: 8px; */
+    padding: .83rem;
+    border-radius: 1px;
     border: none;
     font-size: 1rem;
     text-align: center;
-    margin-left: 4rem;
     cursor: pointer;
 }
 
-.book-now:hover, #header:hover .book-now{
+#header:hover .book-now{
+    margin-left: 3.93rem;
+}
+
+ #header:hover .book-now, .book-now:hover{
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    margin-left: 3.93rem;
-    transition: ease-out .4s;
-    border: 1px solid var(--secondary-color);
+    
+    transition: ease-in .4s;
+    border: 2.5px solid var(--secondary-color);
+    border-radius: 1px;
 }   
+
+#header:hover .book-now:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
 
 /* transitions */
 .hover_theme, .hover_theme1 {
@@ -330,9 +314,9 @@ address {
     /* border-color: var(--hard-color); */
     color: var(--primary-soft-color);
     background-color: transparent;
-    font-size: 2vw;
+    font-size: 4.4vw;
     padding: 1vw;
-    padding-right: 2vw;
+    padding-right: 14.75vw;
     text-align: center;
     width: 100%;
     transition: ease-in .5s;
@@ -340,10 +324,16 @@ address {
     /* position:; */
 }
 
+.theme-hero-content-reverse{
+    width: 25vw;
+    font-size: 1.4rem;
+    color: var(--primary-soft-color);
+}
+
 .theme-hero-reverse:hover {
 transform: scale(1.07);
 transition: ease-out .5s;
-background-color: var(--primary-color-transparent);
+/* background-color: var(--primary-color-transparent); */
 color: #ffffff;
 }
 
@@ -371,4 +361,118 @@ color: #ffffff;
     
 }
 
+#booker {
+    width:  100%;
+    background-color: var(--primary-color);
+    padding: 3rem;
+}
+
+#booker .flex {
+    justify-content: stretch;
+    align-items: center;
+    /* gap: 1rem; */
+}
+
+#booker h1{
+    color: var(--primary-hard-color);
+    font-size: 2.25rem;
+    margin-right: 4rem;
+}
+
+#booker label {
+    /* margin: 0 1.25rem; */
+    /* font-size: 1.75rem; */
+}
+
+#booker label p {
+    margin: 0 .15rem;
+    font-size: 1rem;
+}
+
+#booker label:first-child p {
+    margin: 0 2rem;
+}
+
+
+#booker label:first-child, #booker label:not(first-child)  {
+    margin: 0 2.75vw;
+}
+
+#booker input, #booker select {
+    /* padding: 0 1rem .2rem 0; */
+    font-size: 1rem;
+    border: 1.5px solid var(--primary-hard-color);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+#booker select {
+    padding: 0 6rem 0 0rem;
+}
+
+#dash {
+    align-self: end;
+    /* text-align: end; */
+}
+
+#booker select {
+    margin: 0 2rem;
+}
+
+a.hints {
+    position: absolute;
+    font-size: .95rem;
+    margin-left: 1.5rem;
+    margin-top: .5rem;
+    /* margin-top: 3rem; */
+    color: var(--accent-font-color);
+}
+
+/* site plan /home */
+
+#site-plan, #home{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* width: 100%; */
+}
+
+
+
+#site-plan-container {
+    width: 100%;
+}
+
+#site-plan-container > section {
+    margin: .5rem;
+    max-width: 250px;
+}
+/* 
+#site-plan > div:first-child {
+    margin: auto;
+} */
+
+#site-plan > div:first-child, #home > section:first-child {
+margin-bottom: 14vw;
+max-width: 175px;
+margin-left: 30vw;
+}
+
+
+#site-plan > div:first-child > div > p, #home > section:first-child > div > p {
+/* margin-top: 30px; */
+color: var(--primary-color);
+margin-left: 15px;
+margin-top: 10px;
+    }
+
+
+#wireframes {
+    width: 100%;
+    text-align: center;
+    border-left: 0 solid var(--secondary-color);
+}
 
