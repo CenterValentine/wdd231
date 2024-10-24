@@ -1,0 +1,14 @@
+#room,#book {
+    max-width: 80vw;
+}
+
+.card-container {
+    border-radius: .875rem;
+    overflow: hidden;
+    height: 17.8125rem;
+    margin: 0.5rem 0px 1rem;
+    border: 1.5px solid var(--primary-hard-color);
+    /* Marriot BonVoy shadow color */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 0.25rem 1.25rem 0px
+    /* background-color: var(--primary-soft-color); */
+}

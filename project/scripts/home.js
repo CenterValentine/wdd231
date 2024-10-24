@@ -5,7 +5,7 @@ console.log("currentUrl: ", currentUrl);
 
 window.addEventListener('scroll', function() {
 
-    if (this.window.pathname.includes('book','about')){
+    if (currentUrl.includes('home','book','about')){
     // Use forEach to loop through each element in the NodeList
     // headerobjs.forEach(function(element) {
     console.log(window.scrollY);

@@ -30,8 +30,6 @@
     
 }
 
-
-
 * {
     margin: 0;
     font-family: var(--main-font);
@@ -41,6 +39,7 @@
 
 main {
     min-height: 90vh;
+    height: 100%;
 }
 
 .flex {
@@ -374,11 +373,12 @@ color: #ffffff;
 #booker {
     width:  100%;
     background-color: var(--primary-color);
-    padding: 3rem;
+    padding: 3rem 0;
+    /* margin: auto; */
 }
 
 #booker .flex {
-    justify-content: stretch;
+    justify-content: center;
     align-items: center;
     /* gap: 1rem; */
 }
