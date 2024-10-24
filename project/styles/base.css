@@ -220,7 +220,7 @@ li {
 
 
 #header:hover #brand #logo-description,#brand #logo-description.scrolled {
-    margin-left: 7rem;
+    /* margin-left: 7rem; */
     color: var(--primary-hard-color);
     transform: translateX(3rem);
     transition: ease-in-out .6s;
@@ -250,6 +250,10 @@ address {
     /* line-height: 60px; */
 }
 
+#header .book-now {
+    margin-left: 3.93rem;
+}
+
 .book-now {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -262,7 +266,7 @@ address {
 }
 
 #header:hover .book-now{
-    margin-left: 3.93rem;
+    
 }
 
  #header:hover .book-now, .book-now:hover{
