@@ -39,6 +39,10 @@
 }
 
 
+main {
+    min-height: 90vh;
+}
+
 .flex {
     display: flex;
     justify-content: center;
@@ -482,3 +486,24 @@ margin-top: 10px;
     border-left: 0 solid var(--secondary-color);
 }
 
+/* ------ rooms -------- */
+
+#room .container-spacer{
+    width: auto;
+    margin: auto;
+    min-height: 80vh;
+    /* height: 100%; */
+
+}
+
+.rooms-results-container {
+max-width: 90rem;
+margin:auto;
+flex-direction: column;
+}
+
+.Center {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+}

@@ -1,7 +1,11 @@
 const headerobjs = document.querySelector('#header');
 const logoDescription = document.querySelector('#logo-description');
+const currentUrl = window.location.href;
+console.log("currentUrl: ", currentUrl);
 
 window.addEventListener('scroll', function() {
+
+    if (this.window.pathname.includes('book','about')){
     // Use forEach to loop through each element in the NodeList
     // headerobjs.forEach(function(element) {
     console.log(window.scrollY);
@@ -12,5 +16,4 @@ window.addEventListener('scroll', function() {
             headerobjs.classList.remove('scrolled');
             logoDescription.classList.remove('scrolled');
         }
-    });
-// });
+    }});
