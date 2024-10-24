@@ -22,6 +22,7 @@
     width: 55%;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--primary-soft-color);
     /* border-radius: 0px 0.875rem 0.875rem 0px; */
 
 }
@@ -29,6 +30,7 @@
 .image-component {
     height: 18rem;
     width: 32rem;
+    
 }
 
 .glider {
@@ -60,20 +62,45 @@
 .carousel-button.back-button {
     position: absolute;
     left: 1rem;
-    top: calc(50% + 2.5rem);
+    top: calc(50% + 1.5rem);
     z-index: 4;
+    color: var(--primary-color);
 };
 
 .slider-wrapper img {
     z-index: 1;
+    overflow: hidden;
 }
 
 
 .carousel-button.forward-button {
     position: absolute;
-    right: 1rem;
-    top: calc(50% + 2.5rem);
+    right: 15rem;
+    top: calc(50% + 1.5rem);
     z-index: 99;
+    color: var(--primary-color);
 };
 
+.carousel-button p {
+font-size: 1.5rem;
+}
+
+
+
+
 /* color: var(--primary-hard-color); */
+
+
+/* text content */
+
+.content-details {
+
+}
+
+.content-footer {
+
+}
+
+.content-room-price {
+    
+}
