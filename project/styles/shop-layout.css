@@ -124,13 +124,15 @@ width: 100%;
 
 .content-room-price {
     /* background-color: var(--primary-soft-color); */
-    
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .content-room-price button {
     border-radius: 50px;
     background-color: var(--primary-hard-color);
-    color: var(--primary-color)
+    color: var(--primary-color);
+    margin: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
