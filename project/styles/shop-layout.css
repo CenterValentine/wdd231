@@ -2,12 +2,18 @@
     max-width: 80vw;
 }
 
+
+#room .flex {
+    align-items: unset;
+    /* justify-content:flex-start; */
+}
+
 .card-container {
     border-radius: .875rem;
     overflow: hidden;
     height: 17.8125rem;
     margin: 0.5rem 0px 1rem;
-    border: 1.5px solid var(--primary-hard-color);
+    border: .2px solid var(--primary-hard-color);
     /* Marriot BonVoy shadow color */
     box-shadow: rgba(0, 0, 0, 0.07) 0px 0.25rem 1.25rem 0px
     /* background-color: var(--primary-soft-color); */
@@ -15,15 +21,6 @@
 
 .image-gallery-container {
     width: 45%;
-
-}
-
-.text-container {
-    width: 55%;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--primary-soft-color);
-    /* border-radius: 0px 0.875rem 0.875rem 0px; */
 
 }
 
@@ -62,7 +59,7 @@
 .carousel-button.back-button {
     position: absolute;
     left: 1rem;
-    top: calc(50% + 1.5rem);
+    top: calc(40%);
     z-index: 4;
     color: var(--primary-color);
 };
@@ -76,10 +73,15 @@
 .carousel-button.forward-button {
     position: absolute;
     right: 15rem;
-    top: calc(50% + 1.5rem);
+    top: calc(40%);
     z-index: 99;
     color: var(--primary-color);
 };
+
+.carousel-button:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-hard-color);
+}
 
 .carousel-button p {
 font-size: 1.5rem;
@@ -93,14 +95,47 @@ font-size: 1.5rem;
 
 /* text content */
 
-.content-details {
 
+.text-container {
+    width: 55%;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    border-radius: 0px 0.875rem 0.875rem 0px;
+    /* height: 18rem; */
+}
+
+.content-details {
+margin-left: 1.5rem;
+margin-right: 1.5rem;
+height: 11.56rem;
+flex-direction: column;
+justify-content: space-around;
+align-items: flex-start;
+background-color: var(--primary-soft-color);
 }
 
 .content-footer {
-
+justify-self: flex-end;
+align-self: flex-end;
+border-top: 1.5px solid var(--primary-soft-color);
+width: 100%;
 }
 
 .content-room-price {
+    /* background-color: var(--primary-soft-color); */
     
+}
+
+.content-room-price button {
+    border-radius: 50px;
+    background-color: var(--primary-hard-color);
+    color: var(--primary-color)
+}
+
+@media screen and (min-width: 1200px) {
+    .card-container {
+        max-width: 1140px;
+        width: 100%;
+    }
 }
