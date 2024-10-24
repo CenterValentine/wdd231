@@ -266,7 +266,7 @@ address {
 }
 
 #header:hover .book-now{
-    
+    margin-left: 4.97rem;
 }
 
  #header:hover .book-now, .book-now:hover{
@@ -276,22 +276,24 @@ address {
     transition: ease-in .4s;
     border: 2.5px solid var(--secondary-color);
     border-radius: 1px;
+    
 }   
 
 #header:hover .book-now:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    
 }
 
 /* transitions */
 .hover_theme, .hover_theme1 {
     transform: scale(1);
-    transition: ease-in .4s;
+    transition: ease-in-out .4s;
 }
 
 .hover_theme1:hover{
     transform: scale(1.07);
-    transition: ease-in .4s;
+    transition: ease-in-out .4s;
     text-decoration: solid;
 }
 
