@@ -2,6 +2,10 @@
     max-width: 80vw;
 }
 
+#room img {
+    aspect-ratio: auto 512/288;
+}
+
 
 #room .flex {
     align-items: unset;
@@ -24,7 +28,7 @@
 
 }
 
-.image-component {
+.image-gallery-component {
     height: 18rem;
     width: 32rem;
     
@@ -53,38 +57,48 @@
     width: 2.5rem;
     height: 2.5rem;
     font-size: 4rem;
-    z-index: 4;
+    z-index: 99;
 }
 
 .carousel-button.back-button {
     position: absolute;
     left: 1rem;
-    top: calc(40%);
-    z-index: 4;
+    top: calc(36.5%);
+    z-index: 98;
     color: var(--primary-color);
+    opacity: .6;
 };
 
-.slider-wrapper img {
-    z-index: 1;
+/* aspect ratio ~ 8:5 */
+#room .slider-wrapper {
+    z-index: 97;
     overflow: hidden;
+
+}
+
+#room .slider-wrapper img {
+    z-index: 1;
 }
 
 
 .carousel-button.forward-button {
     position: absolute;
-    right: 15rem;
-    top: calc(40%);
-    z-index: 99;
+    right: 2rem;
+    top: calc(36.5%);
+    z-index: 98;
     color: var(--primary-color);
+    opacity: .6;
 };
 
-.carousel-button:hover {
+#room .carousel-button:hover {
     background-color: var(--primary-color);
     color: var(--primary-hard-color);
+    opacity: 1;
 }
 
-.carousel-button p {
-font-size: 1.5rem;
+#room .carousel-button > p {
+/* font-size: 1.5rem; */
+opacity: 1;
 }
 
 
@@ -100,8 +114,9 @@ font-size: 1.5rem;
     width: 55%;
     flex-direction: column;
     justify-content: space-between;
-    
+    z-index: 99;
     border-radius: 0px 0.875rem 0.875rem 0px;
+    background-color: var(--primary-color);
     /* height: 18rem; */
 }
 
@@ -112,27 +127,58 @@ height: 11.56rem;
 flex-direction: column;
 justify-content: space-around;
 align-items: flex-start;
-background-color: var(--primary-soft-color);
 }
 
 .content-footer {
 justify-self: flex-end;
 align-self: flex-end;
-border-top: 1.5px solid var(--primary-soft-color);
 width: 100%;
+
 }
 
-.content-room-price {
+
+#room .room-title {
+    margin-top: .75rem;
+    width: fit-content;
+}
+#room .room-title h2{
+    text-align: left;
+    padding: 0;
+    font-size: 1.5rem;
+    
+}
+
+
+#room .room-ammenities, #room .room-description, #room .room-title h2, #room .room-direct {
+    background-color: var(--primary-soft-color);
+}
+
+#room .content-room-price {
     /* background-color: var(--primary-soft-color); */
     align-items: center;
     justify-content: flex-end;
+    margin: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+#room .content-room-price span:first-child {
+    font-size: 1.23rem;
+    margin-right: 0.5rem;
+}
+
+#room .content-room-price span:nth-child(2) {
+    font-size: 1rem;
+    margin-right: 0.5rem;
 }
 
 .content-room-price button {
     border-radius: 50px;
     background-color: var(--primary-hard-color);
     color: var(--primary-color);
-    margin: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.horizontal-line {
+    border-top: 1.5px solid var(--primary-soft-color);
 }
 
 @media screen and (min-width: 1200px) {
