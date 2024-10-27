@@ -36,26 +36,6 @@
     }
 
     
-    main {
-        padding-top: 200px; /* Adjust this value to match the header height */
-    }
-#book {
-    padding-top: 83px;
-}
-
-    
-    #header:hover{
-        background-color: var(--primary-color) !important;
-        color: var(--primary-hard-color);
-    }
-    
-    #header.scrolled {
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        background: var(--primary-color);
-        background-color: var(--primary-color);
-        color: var(--primary-hard-color);
-    }
-    
     #site-plan-container {
         margin-bottom: 10vw;
     }

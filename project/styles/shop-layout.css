@@ -7,9 +7,49 @@
 }
 
 
+main#room {
+
+    padding-top: 100px;
+    
+    }
+
 #room .flex {
     align-items: unset;
     /* justify-content:flex-start; */
+}
+
+#room  .filter-options-container{
+    /* width: 100%; */
+    max-width: 80vw;
+    margin: auto;
+}
+
+#room .filter-options{
+    margin: .75rem 3rem .65rem 3rem;
+}
+
+#room .filter-options.flex {
+    justify-content: flex-start;
+    align-items: space-around;
+}
+
+
+
+#room .filter-options .filter{
+    /* padding: 1rem ; */
+    border: 1px solid var(--primary-soft-color);
+    padding: 0.25rem .75rem;
+    border-radius: 6px;
+    font-weight: 200;
+    margin: 0   1rem;
+    cursor: pointer;
+
+}
+
+.filter:hover {
+    background-color: var(--primary-soft-color);
+    border: 1px solid var(--primary-hard-color);
+
 }
 
 .card-container {
@@ -30,12 +70,16 @@
 
 .image-gallery-component {
     height: 18rem;
-    width: 32rem;
+    width: 36.1vw;
     
 }
 
+.image-gallery-container {
+    margin: auto;
+}
+
 .glider {
-    margin: 0px auto;
+    /* margin: 0px auto; */
     /* width: 100% */
 }
 
@@ -49,6 +93,26 @@
     position: relative;
 }
 
+
+
+/* aspect ratio ~ 8:5 */
+/* real image-container */
+#room .slider-wrapper {
+    z-index: 97;
+    overflow: hidden;
+
+
+}
+
+.glider.carousel {
+    position: relative;
+}
+
+
+#room .slider-wrapper img {
+    z-index: 1;
+}
+
 .carousel-button {
     background-color: var(--primary-soft-color);
     border-radius: 50%;
@@ -57,44 +121,30 @@
     width: 2.5rem;
     height: 2.5rem;
     font-size: 4rem;
+    position: absolute;
+    color: var(--primary-color);
+    opacity: 0.5;
+    cursor: pointer;
     z-index: 99;
+    top: calc(29%);
+    transition: opacity 0.5s ease; /* Add transition for smooth hover */
+}
+
+
+.carousel-button:hover {
+    opacity: 0.7;
 }
 
 .carousel-button.back-button {
-    position: absolute;
     left: 1rem;
-    top: calc(36.5%);
     z-index: 98;
-    color: var(--primary-color);
-    opacity: .6;
-};
-
-/* aspect ratio ~ 8:5 */
-#room .slider-wrapper {
-    z-index: 97;
-    overflow: hidden;
-
 }
-
-#room .slider-wrapper img {
-    z-index: 1;
-}
-
 
 .carousel-button.forward-button {
-    position: absolute;
-    right: 2rem;
-    top: calc(36.5%);
-    z-index: 98;
-    color: var(--primary-color);
-    opacity: .6;
-};
-
-#room .carousel-button:hover {
-    background-color: var(--primary-color);
-    color: var(--primary-hard-color);
-    opacity: 1;
+    right: 2.25vw;
+    z-index: 100;
 }
+
 
 #room .carousel-button > p {
 /* font-size: 1.5rem; */
@@ -118,11 +168,14 @@ opacity: 1;
     border-radius: 0px 0.875rem 0.875rem 0px;
     background-color: var(--primary-color);
     /* height: 18rem; */
+    
 }
 
 .content-details {
-margin-left: 1.5rem;
-margin-right: 1.5rem;
+/* margin-left: 2vw; */
+/* margin-right: 2vw; */
+margin: auto;
+max-width: 96%;
 height: 11.56rem;
 flex-direction: column;
 justify-content: space-around;
@@ -136,6 +189,7 @@ width: 100%;
 
 }
 
+/* #room .room-info {} */
 
 #room .room-title {
     margin-top: .75rem;
@@ -145,7 +199,6 @@ width: 100%;
     text-align: left;
     padding: 0;
     font-size: 1.5rem;
-    
 }
 
 
@@ -159,6 +212,8 @@ width: 100%;
     justify-content: flex-end;
     margin: 0.5rem 1.5rem 0.5rem 1rem;
 }
+
+
 
 #room .content-room-price span:first-child {
     font-size: 1.23rem;
@@ -175,7 +230,17 @@ width: 100%;
     background-color: var(--primary-hard-color);
     color: var(--primary-color);
     padding: 0.5rem 1rem;
+    transition: background-color 0.5s ease;
+    border: 1px solid var(--primary-color);
 }
+
+.content-room-price > button:hover {
+    background-color: var(--background-color);
+    color: var(--primary-hard-color);
+    border: 1px solid var(--primary-hard-color);
+}
+
+
 
 .horizontal-line {
     border-top: 1.5px solid var(--primary-soft-color);
@@ -186,4 +251,103 @@ width: 100%;
         max-width: 1140px;
         width: 100%;
     }
+}
+
+
+@media screen and (max-width: 768px){
+
+
+    main#room {
+        padding-top: 30px;
+        }
+
+
+    .image-gallery-container {
+        width: 100%;
+        height: 55%;
+    }
+
+
+    .image-gallery-component {
+        width: 100%;
+    }
+
+    .carousel-button{
+        top: 14%;
+    }
+
+.text-container {
+    border-radius: 0px 0 0 0px;
+
+    height: 45%;
+    
+}
+
+
+
+.card-container {
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+}
+
+
+
+
+/* room-info */
+
+.text-container{
+    width: 100%;
+}
+
+
+
+.content-details {
+
+/* test value */
+    z-index: 1000;
+    overflow:scroll;
+}
+
+
+.room-title-ammenities{
+    display: flex;
+    justify-content: flex-start;
+    margin: .5rem 0;
+
+}
+
+
+
+#room .room-title {
+    margin-top: 0rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    width: 55%;
+
+}
+
+#room .room-title h2 {
+    font-size: 1.1rem;
+}
+
+#room .room-ammenities {
+
+    margin-left: 15px;
+}
+
+#room .room-description {
+    margin: .5rem 0;
+
+
+}
+
+#room .room-direct {}
+
+#room .content-room-price {
+
+}
+
+
+
 }

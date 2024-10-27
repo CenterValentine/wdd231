@@ -1,4 +1,86 @@
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1000px){
+
+    #logo {
+        padding-right: 0rem;
+        
+    }
+ #booker > .flex:nth-child(1){
+        flex-direction: column;
+
+    }
+
+
+    #booker > .flex:nth-child(1) .catchphrase{
+        margin-bottom: 2rem;
+        margin-top: 0rem;
+            }
+
+
+    #booker .catchphrase h1 {
+        margin-right: 0;
+    }
+
+    #booker .catchphrase label {
+        margin: 0;
+    }
+
+    #booker > div > div:nth-child(2).flex{
+        flex-wrap: wrap;
+    }
+
+    #booker > div > div:nth-child(2) button{
+        margin-top: 4rem;
+        width: 100%;
+        border: 1.5px solid var(--secondary-color);
+        padding: 10px inherit;
+    }
+
+#header .book-now {
+    margin-left: 0rem;
+}
+
+#logo-description {
+    position: absolute;
+    bottom: 10%;
+    left: 13.75%;   
+    /* margin-left: 7rem; */
+    /* margin-top: -50px; */
+    
+    z-index: 1;
+}
+
+
+
+#header:hover #brand #logo-description, #brand #logo-description.scrolled {
+    /* margin-left: 7rem; */
+    transform: translateX(0rem);
+    margin-left: 5rem;
+}
+
+#brand img {
+    height: 40px;
+    /* margin: 3px; */
+}
+
+ul#menu-list.menu-list.hover-theme.flex {
+    /* align-items: flex-start; */
+    padding: 0
+}
+
+li {
+    padding: 1.25vw 1.25vw;
+}
+
+}
+
+@media screen and (max-width: 770px) {
+    
+
+
+    .logo-description {
+        opacity: 0;
+        display: none;
+    }
 
     #menu-button {
         display: block;
@@ -18,21 +100,46 @@
     .navigation li {
         text-align: center;
     }
+
+#logo {padding: 0}
+
+    #brand {
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
 }
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
+#header #header-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 0; */
+}
 
+#header #header-container #brand {
+
+    justify-items: center;
+    
+    /* width: 70%; */
+}
+
+#header #header-container #brand img {
+    padding-left: 1rem;
+}
     #hamburger {
         color: var(--sample-color);
-        padding: 1rem;
+        padding: .75rem;
         display: block;
         text-align: center;
         font-size: 4rem;
         z-index: 99;
         padding: 0rem;
+        line-height: 5rem;;
+        width: 100%;
     }
 
     #menu-list,
@@ -53,10 +160,25 @@
 
     #menu-list {
         padding: 0;
+        padding-bottom: 1rem;
     }
 
     #menu-list li {
-        padding: 1rem 15rem;
+        padding: .6rem 15rem;
+        width: 100%;
+        text-align: center;
+    }
+    .book-now  {
+        width: 100%;
+        margin: 0;
+
+    }
+
+
+   #header #header-container > a {
+        padding: 0;
+        width: 100%;
+        margin-right: 15px;
     }
 
     #brand {
@@ -68,4 +190,9 @@
         justify-content: center;
         align-items: center;
     }
+
+    #booker > div > div:nth-child(2).flex {
+        flex-direction: column;
+    }
 }
+

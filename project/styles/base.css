@@ -27,6 +27,9 @@
     --background-color: #daddd8;
     --secondary-background-color: #1F61A4;
     --header-background-color: #155C85ff;
+
+    --box-shadow: rgba(0, 0, 0, 0.07) 0px 0.25rem 1.25rem 0px;
+    --box-shadow-white: rgba(255, 255, 255, 0.156) 0px 0.25rem 1.25rem 0px;
     
 }
 
@@ -36,11 +39,40 @@
     border-radius: 0px;
 }
 
-
 main {
     min-height: 90vh;
+    margin: auto;
     height: 100%;
 }
+
+main:not(#room, #book) {
+
+    padding-top: 200px; 
+}
+
+
+#book {
+padding-top: 83px;
+}
+
+#header {
+    width: 100%;
+    z-index: 999;
+    opacity: .99;
+}
+
+#header:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--primary-hard-color);
+}
+
+#header.scrolled {
+    box-shadow: var(--box-shadow);
+    background: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--primary-hard-color);
+}
+    
 
 .flex {
     display: flex;
@@ -48,6 +80,7 @@ main {
     align-items: center;
     /* flex-direction: row; */
     flex-wrap: nowrap;
+    /* transition: ease-in-out .6s; */
 
 }
 
@@ -113,11 +146,19 @@ ul {
 li {
     text-decoration: none;
     padding: 1.5rem 1.5rem;
+    text-wrap: nowrap;
     /* underline */
     /* text-decoration: underline; */
     /* color: var(--primary-font-color); */
 }
 
+fieldset {
+    border-radius: 6px;
+}
+
+fieldset legend {
+    padding: 0px 4px;
+}
 
 
 #hamburger:hover {
@@ -211,26 +252,32 @@ li {
 } */
 
 #brand #logo-description {
-    grid-row: 2/3;
-    margin-left: 5rem;
+    /* grid-row: 2/3; */
+    margin-left: 7rem;
     margin-top: -30px;
-    color: transparent;
+    color: var(--primary-color);
+    opacity: .1;
     transition: ease-in 1s;
+    z-index: 0;
     /* position: absolute; */
 
 
 }
 
 
-#header:hover #brand #logo-description,#brand #logo-description.scrolled {
+
+
+#header:hover #brand #logo-description, #brand #logo-description.scrolled {
     /* margin-left: 7rem; */
     color: var(--primary-hard-color);
     transform: translateX(3rem);
     transition: ease-in-out .6s;
+    opacity: 1;
 }
 
 #logo {
     padding-right: 3rem;
+    transition: ease-in-out .6s;
 }
 
 #footer {
@@ -266,17 +313,20 @@ address {
     font-size: 1rem;
     text-align: center;
     cursor: pointer;
+    text-wrap: nowrap;
 }
 
-#header:hover .book-now{
-    margin-left: 4.97rem;
+
+
+#header .book-now {
+    margin-left: 0rem;
 }
 
  #header:hover .book-now, .book-now:hover{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     
-    transition: ease-in .4s;
+    transition: ease-out .8s;
     border: 2.5px solid var(--secondary-color);
     border-radius: 1px;
     
@@ -292,6 +342,7 @@ address {
 .hover_theme, .hover_theme1 {
     transform: scale(1);
     transition: ease-in-out .4s;
+
 }
 
 .hover_theme1:hover{
@@ -305,7 +356,6 @@ address {
     transform: scale(1.025);
     transition: ease-in .4s;
     text-decoration: solid;
-
 }
 
 .theme-header {
@@ -386,17 +436,16 @@ color: #ffffff;
 #booker h1{
     color: var(--primary-hard-color);
     font-size: 2.25rem;
-    margin-right: 4rem;
+    margin-right: 3vw;
 }
 
 #booker label {
-    /* margin: 0 1.25rem; */
+    margin: 0 3vw;
     /* font-size: 1.75rem; */
 }
 
 #booker label p {
-    margin: 0 .15rem;
-    font-size: 1rem;
+    /* margin: 0 .15rem; */
 }
 
 #booker label:first-child p {
@@ -441,7 +490,7 @@ a.hints {
 
 /* site plan /home */
 
-#site-plan, #home{
+#site-plan, #home, #about-us{
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -487,6 +536,10 @@ margin-top: 10px;
 }
 
 /* ------ rooms -------- */
+
+#room {
+    margin: auto;
+}
 
 #room .container-spacer{
     width: auto;

@@ -1,0 +1,22 @@
+#feedback1 #radio-selection,
+ #check-out-form #customer-info-form, #check-out-form #billing-info, .hide-form-option {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+#book #booker {
+    padding: 1rem;
+}
+
+#feedback1 #radio-selection label {
+    
+}
+
+#room-previewer .form-room-selector label {
+    margin-left: 5px;
+}
+
+#more-address-info label {
+    margin: 0 1rem;
+}
