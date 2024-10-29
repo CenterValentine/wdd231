@@ -4,6 +4,7 @@
 
 #room img {
     aspect-ratio: auto 512/288;
+
 }
 
 
@@ -100,7 +101,8 @@ main#room {
 #room .slider-wrapper {
     z-index: 97;
     overflow: hidden;
-
+    align-items: center;
+    justify-content: flex-start;
 
 }
 
@@ -109,9 +111,13 @@ main#room {
 }
 
 
+
 #room .slider-wrapper img {
     z-index: 1;
+    /* object-position: center; */
 }
+
+
 
 .carousel-button {
     background-color: var(--primary-soft-color);

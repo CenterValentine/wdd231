@@ -107,6 +107,25 @@ li {
         align-self: flex-end;
         justify-self: flex-end;
     }
+
+
+    #booker .flex #homeForm.flex {
+    flex-direction: column;} 
+
+    #booker .flex #homeForm.flex .form-arrival{
+        margin-top:3.25rem;
+    }
+
+    #booker .flex #homeForm.flex .form-arrival, #homeForm .form-departure {
+    align-self: self-start;
+margin-left: 3.1rem; }
+
+
+#homeForm .form-arrival, #homeForm .form-departure{
+/* margin: 0; */
+}
+
+
 }
 
 

@@ -37,6 +37,7 @@
     margin: 0;
     font-family: var(--main-font);
     border-radius: 0px;
+    font-weight: 300;
 }
 
 main {
@@ -260,11 +261,7 @@ fieldset legend {
     transition: ease-in 1s;
     z-index: 0;
     /* position: absolute; */
-
-
 }
-
-
 
 
 #header:hover #brand #logo-description, #brand #logo-description.scrolled {
@@ -315,6 +312,7 @@ address {
     cursor: pointer;
     text-wrap: nowrap;
 }
+
 
 
 
@@ -398,6 +396,7 @@ color: #ffffff;
 
 .theme-hero-reverse h1 {
     color: #ffffff;
+    letter-spacing: 1rem;
 }
 
 .full {
