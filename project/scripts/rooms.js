@@ -61,13 +61,12 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
 // ".id", ".name", ".svg"
                 amenityTag.setAttribute('class', 'amenity');
                 amenityTag.setAttribute('id', amenityData.id);
+                amenityTag.innerHTML = amenityData.svg;
+                amenityTag.textContent = amenityData.name;
+                // let svgTag = document.createElement('svg');
+                // amenityTag.querySelector('svg').setAttribute('alt', amenityData.name);
 
-                let svgTag = document.createElement('img');
-                svgTag.setAttribute('src', amenityData.svg);
-                svgTag.setAttribute('alt', amenityData.name);
-                // console.log(amenityData);
-
-                amenityTag.appendChild(svgTag);
+                // amenityTag.appendChild(svgTag);
                 roomAmenitiesContainer.appendChild(amenityTag);
             })
 
@@ -94,7 +93,6 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
                                         <h2>${title}</h2>
                                     </div>
                                     <div class="room-ammenities room-info">
-        ${roomAmenitiesContainer}
                                     </div>
                                 </div>
                                 <div class="room-description room-info">
@@ -117,6 +115,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             cardContainer.innerHTML = cardTemplate;
 
             cardContainer.querySelector('.glider.carousel').appendChild(imageContainer);
+            cardContainer.querySelector('.room-ammenities').appendChild(roomAmenitiesContainer);
 
             roomsResultsContainer.appendChild(cardContainer);
             // console.table(roomData);

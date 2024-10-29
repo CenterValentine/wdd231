@@ -213,6 +213,22 @@ width: 100%;
     background-color: var(--primary-soft-color);
 }
 
+#room .room-ammenities {
+    
+}
+
+#room .room-ammenities > div {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-wrap: nowrap;
+    height: min-content;
+    overflow: scroll;
+    /* flex container height */
+    
+
+}
+
 #room .content-room-price {
     /* background-color: var(--primary-soft-color); */
     align-items: center;
