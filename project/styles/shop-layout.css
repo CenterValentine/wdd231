@@ -143,7 +143,7 @@ main#room {
 
 .carousel-button.back-button {
     left: 1rem;
-    z-index: 98;
+    z-index: 9100;
 }
 
 .carousel-button.forward-button {
@@ -152,9 +152,10 @@ main#room {
 }
 
 
-#room .carousel-button > p {
+#room .carousel-button > .arrow {
 /* font-size: 1.5rem; */
 opacity: 1;
+z-index: 50;
 }
 
 

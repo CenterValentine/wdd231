@@ -1,3 +1,4 @@
+import { getRooms } from './fetch-rooms.js';
 const headerobjs = document.querySelector('#header');
 const logoDescription = document.querySelector('#logo-description');
 const currentUrl = window.location.href;
@@ -17,3 +18,38 @@ console.log("currentUrl: ", currentUrl);
             logoDescription.classList.remove('scrolled');
         }
     }});
+
+
+
+    getRooms().then(roomsData => {
+        // console.log("Data", rooms);
+        console.log("roomsData", roomsData);
+
+        roomsData.forEach(roomData => {
+
+            let option = document.createElement('option');
+            option.value = roomData.id;
+            option.text = roomData.title;
+
+            rooms.appendChild(option);
+            // console.table(roomData);
+        });
+
+        
+
+        rooms = roomOptions;
+
+    });
+
+
+
+// console.log("roomData: ", roomData.JSON.stringify());
+
+
+// if (roomData.length > 0) {
+//     const roomData = JSON.stringify(roomData);
+//     // console.log("roomObjectsCount: ", roomData);
+// };
+
+
+// const homeRooms =  document.querySelector('#home #rooms')

@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="styles/base-mobile.css" />
     <link rel="stylesheet" href="styles/site-plan.css" />
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+    <!-- <script src="scripts/fetch-rooms.js" defer></script> -->
+    <script type="module" src="scripts/home.js" defer></script>
+    
 
 </head>
 
@@ -82,10 +84,8 @@
                         <label>
                             <p>Rooms</p><br>
                             <select id="rooms" name="rooms" required>
-                                <option value="" disabled selected>Select Room</option>
-                                <option value="standard">Standard</option>
-                                <option value="deluxe">Deluxe</option>
-                                <option value="economy">Economy</option>
+                                <option value="" disabled selected>Select a Room</option>
+                                
                             </select><br>
                             <a class="hints" href="rooms.html"><i>Explore our rooms</i></a>
                         </label>
