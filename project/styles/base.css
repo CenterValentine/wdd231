@@ -52,6 +52,8 @@ main:not(#room, #book) {
 }
 
 
+
+
 #book {
 padding-top: 83px;
 }
@@ -161,6 +163,14 @@ fieldset legend {
     padding: 0px 4px;
 }
 
+.background-scroll-effect{
+    background-image: url('../images/drift-background.jpeg');
+    background-position:top;
+    background-size: 1700px auto;
+    background-repeat: no-repeat;
+
+    z-index: 5;
+}
 
 #hamburger:hover {
     background-color: var(--secondary-color);

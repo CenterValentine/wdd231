@@ -8,7 +8,7 @@
     --accent-color: #DBAC80;
     --main-font: 'Afacad Flux';
     --secondary-font: 'Karla';
-    --primary-font-color: #000000;
+    --primary-font-color: hsl(0, 0%, 0%);
     --secondary-font-color: #daddd8;
     --accent-font-color: #1F61A4;
     --background-color: #daddd8;
@@ -28,9 +28,6 @@
         transition: background 1s ease;
         z-index: 3;
         color: var(--primary-color);
-
-        
-
     }
 
     
@@ -49,15 +46,7 @@
     
     } */
     
-    .background-scroll-effect{
-        background-image: url('../images/drift-background.jpeg');
-        /* background-image-size */
-        background-position:top;
-        background-size: 1700px auto;
-        background-repeat: no-repeat;
-
-        z-index: 5;
-    }
+    
     
 }
 

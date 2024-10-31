@@ -34,22 +34,5 @@ console.log("currentUrl: ", currentUrl);
             rooms.appendChild(option);
             // console.table(roomData);
         });
-
-        
-
         rooms = roomOptions;
-
     });
-
-
-
-// console.log("roomData: ", roomData.JSON.stringify());
-
-
-// if (roomData.length > 0) {
-//     const roomData = JSON.stringify(roomData);
-//     // console.log("roomObjectsCount: ", roomData);
-// };
-
-
-// const homeRooms =  document.querySelector('#home #rooms')

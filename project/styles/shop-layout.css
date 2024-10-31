@@ -8,6 +8,8 @@
 }
 
 
+
+
 main#room {
 
     padding-top: 100px;
@@ -66,6 +68,7 @@ main#room {
 
 .image-gallery-container {
     width: 45%;
+    /* max-width: 0px; */
 
 }
 
@@ -87,21 +90,44 @@ main#room {
 .slider-wrapper {
     /* width: 100%; */
     /* height: 288px; */
-    background-size: cover;
+    /* background-size: cover; */
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
 }
+
+.slider-wrapper img {
+    object-fit: cover;
+    width: 100%; 
+    flex: 0 0 100%;
+    /* min-width: 100%;  */
+    /* height: auto; */
+    /* flex-shrink: 0; */
+    /* width: 100%; */
+    /* height: 100%;
+    /* object-fit: cover; */
+    /* object-position: center;  */
+} 
 
 .carousel {
     position: relative;
 }
 
+.svg-container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .4rem;
+}
 
-
+.room-ammenities.room-info {
+    margin: .5rem 0;
+}
 /* aspect ratio ~ 8:5 */
 /* real image-container */
 #room .slider-wrapper {
     z-index: 97;
     overflow: hidden;
-    align-items: center;
+    /* align-items: center; */
     justify-content: flex-start;
 
 }
@@ -132,7 +158,7 @@ main#room {
     opacity: 0.5;
     cursor: pointer;
     z-index: 99;
-    top: calc(29%);
+    top: calc(34%);
     transition: opacity 0.5s ease; /* Add transition for smooth hover */
 }
 
@@ -151,6 +177,10 @@ main#room {
     z-index: 100;
 }
 
+
+.slider-wrapper {
+
+}
 
 #room .carousel-button > .arrow {
 /* font-size: 1.5rem; */
@@ -196,10 +226,9 @@ width: 100%;
 
 }
 
-/* #room .room-info {} */
 
 #room .room-title {
-    margin-top: .75rem;
+    margin-bottom: .75rem;
     width: fit-content;
 }
 #room .room-title h2{
@@ -208,22 +237,30 @@ width: 100%;
     font-size: 1.5rem;
 }
 
-
+/* for testing only */
 #room .room-ammenities, #room .room-description, #room .room-title h2, #room .room-direct {
-    background-color: var(--primary-soft-color);
+    /* background-color: var(--primary-soft-color); */
 }
 
 #room .room-ammenities {
-    
+    min-height: 25px;
+}
+
+.amenity {
+    width: 20px;
+    height: 20px;
 }
 
 #room .room-ammenities > div {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
+    height: 100%;
     text-wrap: nowrap;
-    height: min-content;
-    overflow: scroll;
+    /* height: min-content; */
+    min-height: 25px;
+    overflow-x: scroll;
+    overflow-y: visible;
     /* flex container height */
     
 
@@ -277,100 +314,11 @@ width: 100%;
 }
 
 
-@media screen and (max-width: 768px){
-
-
-    main#room {
-        padding-top: 30px;
-        }
-
-
-    .image-gallery-container {
-        width: 100%;
-        height: 55%;
-    }
-
-
-    .image-gallery-component {
-        width: 100%;
-    }
-
-    .carousel-button{
-        top: 14%;
-    }
-
-.text-container {
-    border-radius: 0px 0 0 0px;
-
-    height: 45%;
-    
-}
-
-
-
-.card-container {
-    flex-direction: column;
-    width: 100%;
-    height: 20rem;
-}
 
 
 
 
-/* room-info */
-
-.text-container{
-    width: 100%;
-}
-
-
-
-.content-details {
-
-/* test value */
-    z-index: 1000;
-    overflow:scroll;
-}
-
-
-.room-title-ammenities{
-    display: flex;
-    justify-content: flex-start;
-    margin: .5rem 0;
-
-}
-
-
-
-#room .room-title {
-    margin-top: 0rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    width: 55%;
-
-}
-
-#room .room-title h2 {
-    font-size: 1.1rem;
-}
-
-#room .room-ammenities {
-
-    margin-left: 15px;
-}
-
-#room .room-description {
-    margin: .5rem 0;
-
-
-}
-
-#room .room-direct {}
-
-#room .content-room-price {
-
-}
-
+@media screen and (max-width: 770px) {
 
 
 }
