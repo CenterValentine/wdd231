@@ -3,7 +3,7 @@
 }
 
 #room img {
-    aspect-ratio: auto 512/288;
+    /* aspect-ratio: auto 512/288; */
 
 }
 
@@ -91,8 +91,8 @@ main#room {
     /* width: 100%; */
     /* height: 288px; */
     /* background-size: cover; */
-    overflow: hidden; 
-    transition: transform 0.3s ease-in-out;
+    /* overflow: hidden;  */
+    transition: transform .8s ease-in-out;
     width: 100%;
 }
 
@@ -240,6 +240,10 @@ width: 100%;
 /* for testing only */
 #room .room-ammenities, #room .room-description, #room .room-title h2, #room .room-direct {
     /* background-color: var(--primary-soft-color); */
+}
+
+.room-description.room-info {
+    overflow: scroll;
 }
 
 #room .room-ammenities {

@@ -1,71 +1,119 @@
 import { getRooms } from './fetch-rooms.js';
 
-
-const sliderWrapper = document.querySelector('.slider-wrapper');
-const backButton = document.querySelector('.back-button');
-const forwardButton = document.querySelector('.forward-button');
-const slides = document.querySelectorAll('.slider-wrapper img');
-console.log("slides: ",slides);
-let currentIndex = 0;
-console.log("currentIndex: ",currentIndex);
-
-
-backButton.addEventListener('click', function (event) {
-    currentIndex = (currentIndex - 1) % slides.length; 
-    imageSlider();
-    // const imageContainer = event.target.closest('.glider.carousel');
-    // console.log(imageContainer);
-
-});
-
-forwardButton.addEventListener('click', function (event) {
-    currentIndex = (currentIndex + 1) % slides.length;
-    imageSlider();
+// const sliderWrapper = document.querySelector('.slider-wrapper');
+// const sliderWrappers = document.querySelectorAll('.slider-wrapper');
+// const backButton = document.querySelector('.back-button');
+// const forwardButton = document.querySelector('.forward-button');
+// const slides = document.querySelectorAll('.slider-wrapper img');
+// console.log("slides: ",slides);
+// let currentIndex = 0;
+// let currentIndices = Array.from(sliderWrappers, () => 0);
+// console.log("currentIndex: ",currentIndex);
 
 
-    // const imageContainer = event.target.closest('.glider.carousel');
-    // console.log(imageContainer);
-});
+// backButton.addEventListener('click', function (event) {
+//     console.log("backButton clicked");
+//     currentIndex = (currentIndex - 1) % slides.length; 
+//     imageSlider();
+//     // const imageContainer = event.target.closest('.glider.carousel');
+//     // console.log(imageContainer);
+
+// });
+
+// forwardButton.addEventListener('click', function (event) {
+//     console.log("forwardButton clicked");
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     imageSlider();
 
 
-function imageSlider() {
-    const offset = -currentIndex * 95;
-    sliderWrapper.style.transform = `translateX(${offset}%)`;
-}
+//     // const imageContainer = event.target.closest('.glider.carousel');
+//     // console.log(imageContainer);
+// });
+
+
+// function imageSlider(sliderWrapper, currentIndex) {
+//     const offset = -currentIndex * 95;
+//     sliderWrapper.style.transform = `translateX(${offset}%)`;
+// }
 
 const roomsResultsContainer = document.querySelector('.rooms-results-container');
 
     getRooms().then(roomsData => {
-        // console.log("Data", rooms);
-        console.log("roomsData", roomsData);
+        console.log("Rooms data loaded:", roomsData); // Check if data is loaded
+
 
         roomsData.forEach(roomData => {
-            console.log(roomData);
+            console.log("Processing room:", roomData.title); // Verify each room being processed
+
+
+            
             let cardContainer = document.createElement('div');
             cardContainer.setAttribute('class', 'card-container flex helo');
+            
+            
             let containerSpacer = document.createElement('div');
             containerSpacer.setAttribute('class', 'container-spacer rooms-results-container');
             let dialog = document.createElement('dialog');
             
+
+            let cardTemplate = `<div class="image-gallery-container">
+                            <div class="image-gallery-component">
+                                <div class="glider carousel">
+                                    <button type="button" class="carousel-button back-button">
+                                        <p class="left-arrow arrow">
+                                            < </p>
+                                    </button>
+                                    <button type="button" class="carousel-button forward-button">
+                                        <p class="right-arrow arrow"> ></p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container flex">
+                            <div class="content-details flex">
+                                <div class="room-title-ammenities">
+                                    <div class="room-title room-info">
+                                        <h2>${roomData.title}</h2>
+                                    </div>
+                                    <div class="room-ammenities room-info">
+                                    </div>
+                                </div>
+                                <div class="room-description room-info">
+        ${roomData.description}
+                                </div>
+                                <div class="room-direct room-info">
+                                    View room details →
+                                </div>
+                            </div>
+                            <div class="content-footer">
+                                <div class="horizontal-line"></div>
+                                <div class="content-room-price flex">
+                                    <span>${roomData.price || '95'} </span><span>USD/Night</span><button>View Rates</button></span>
+                                </div>
+                            </div>
+                        </div>`
+
+
+
+            cardContainer.innerHTML = cardTemplate;
+
             let highResImageData = roomData.high_res_images;
             let lowResImageData = roomData.low_res_images;
             let imageContainer = document.createElement('div');
             imageContainer.setAttribute('class', 'slider-wrapper flex');
 
-            highResImageData.forEach(image => {
+            lowResImageData.forEach(image => {
                 let imageId = image.id
-                let xetaImageUrl = `https://us-east-1.storage.xata.sh//images/rooms/${imageId}.jpg`;
+                let xetaImageUrl = image.url;
+                // let xetaImageUrl = `https://us-east-1.storage.xata.sh//images/rooms/${imageId}.jpg`;
 
                 let imageTag = document.createElement('img');
                 imageTag.setAttribute('src', xetaImageUrl);
                 imageTag.setAttribute('alt', image.name);
                 imageTag.setAttribute('width', '425');
-                imageTag.setAttribute('loading', 'lazy');
+                // imageTag.setAttribute('loading', 'lazy');
                 imageContainer.appendChild(imageTag); 
             });
-            let title = roomData.title;
-            let description = roomData.description;
-            let price = roomData.price || '95';
 
             // incomplete
             let roomAmenitiesContainer = document.createElement('div');
@@ -90,52 +138,39 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
 
 
 
-            let cardTemplate = `<div class="image-gallery-container">
-                            <div class="image-gallery-component">
-                                <div class="glider carousel">
-                                    <button type="button" class="carousel-button back-button">
-                                        <p class="left-arrow arrow">
-                                            < </p>
-                                    </button>
-                                    <button type="button" class="carousel-button forward-button">
-                                        <p class="right-arrow arrow"> ></p>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-container flex">
-                            <div class="content-details flex">
-                                <div class="room-title-ammenities">
-                                    <div class="room-title room-info">
-                                        <h2>${title}</h2>
-                                    </div>
-                                    <div class="room-ammenities room-info">
-                                    </div>
-                                </div>
-                                <div class="room-description room-info">
-        ${description}
-                                </div>
-                                <div class="room-direct room-info">
-                                    View room details →
-                                </div>
-                            </div>
-                            <div class="content-footer">
-                                <div class="horizontal-line"></div>
-                                <div class="content-room-price flex">
-                                    <span>${price} </span><span>USD/Night</span><button>View Rates</button></span>
-                                </div>
-                            </div>
-                        </div>`
-
-
-
-            cardContainer.innerHTML = cardTemplate;
+            
 
             cardContainer.querySelector('.glider.carousel').appendChild(imageContainer);
             cardContainer.querySelector('.room-ammenities').appendChild(roomAmenitiesContainer);
 
             roomsResultsContainer.appendChild(cardContainer);
             // console.table(roomData);
+            
+        const slides = imageContainer.querySelectorAll('img');
+        let currentIndex = 0;
+
+        // Who knew adding event listeners to each back and forward button creation was possible?!?!
+        const backButton = cardContainer.querySelector('.back-button');
+        const forwardButton = cardContainer.querySelector('.forward-button');
+
+        console.log("Back and forward buttons created for:", roomData.title);
+
+        backButton.addEventListener('click', () => {
+            console.log("Back button clicked for:", roomData.title)
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider(imageContainer, currentIndex);
+        });
+
+        forwardButton.addEventListener('click', () => {
+            console.log("Forward button clicked for:", roomData.title)
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider(imageContainer, currentIndex);
+        });
+
+        function updateSlider(sliderWrapper, index) {
+            const offset = -index * 95;
+            sliderWrapper.style.transform = `translateX(${offset}%)`;
+        }
         });
 
         
