@@ -2,6 +2,43 @@ import { getRooms } from './fetch-rooms.js';
 
 // random price function (between 50 and 150)
 
+if (window.location.pathname.includes('/project/rooms.html')) {
+let searchFormSubmit = document.querySelector('#search-form-submit');
+
+searchFormSubmit.addEventListener('click', function (event) {
+    event.preventDefault();
+    const arrival = document.getElementById('arrival').value;
+    const departure = document.getElementById('departure').value;
+
+    let dates = getDates(arrival, departure);
+
+    roomLoader(dates);
+    
+});
+}
+
+function getDates(arrival,departure){
+    // dates are from form date inputs
+    let arrivalDate = new Date(arrival);
+    let departureDate = new Date(departure);
+    // let dates = [arrivalDate, departureDate];
+// this produces false value to emulate a verification of room availability
+
+    let randomBoolean = Math.random() >= 0.5;
+    console.log("randomBoolean: ", randomBoolean);
+    if (randomBoolean) {
+        return false;
+    } else {
+        return true;}
+
+
+    // future use will return a list of room ids that are available.
+
+    
+
+}
+
+
 function randomPrice() {
     return Math.floor(Math.random() * 100) + 50;
 }
@@ -87,11 +124,13 @@ allFilter.addEventListener('click', function (event) {
 });}
 
 
-const roomsResultsContainer = document.querySelector('.rooms-results-container');
+function roomLoader(dates) {
 
+    const roomsResultsContainer = document.querySelector('.rooms-results-container');
+if (dates){
+    roomsResultsContainer.innerHTML = '';
     getRooms().then(roomsData => {
         console.log("Rooms data loaded:", roomsData); // Check if data is loaded
-
 //<a href="">View room details →</a>
         let roomsIndex = 0;
         roomsData.forEach(roomData => {
@@ -105,6 +144,8 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             containerSpacer.setAttribute('class', 'container-spacer rooms-results-container');
             let dialog = document.createElement('dialog');
             
+            let pathMiddle = '/project/'
+            let bookRoomUrl = `${window.location.origin}${pathMiddle}book.html?room=${roomData.id}`;
 
             let cardTemplate = `<div class="image-gallery-container">
                             <div class="image-gallery-component">
@@ -138,7 +179,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
                             <div class="content-footer">
                                 <div class="horizontal-line"></div>
                                 <div class="content-room-price flex">
-                                    <span class="price-filter-target">${randomPrice()    ||roomData.price || '95'} </span><span>USD/Night</span><button>View Rates</button></span>
+                                    <span class="price-filter-target">${randomPrice()    ||roomData.price || '95'} </span><span>USD/Night</span><a href="${bookRoomUrl}"><button class="book-now">Book Now</button></a>
                                 </div>
                             </div>
                         </div>`
@@ -236,4 +277,10 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
 
 
 
-    
+} else {
+    // console.log("No rooms available for selected dates");
+    roomsResultsContainer.innerHTML = '<h2>No rooms available for selected dates. Try a different date range.</h2>';
+}
+
+
+}

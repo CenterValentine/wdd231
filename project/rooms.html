@@ -25,9 +25,11 @@
     <link rel="stylesheet" href="styles/shop-layout.css" />
     <link rel="stylesheet" href="styles/shop-layout-mobile.css" />
     <link rel="stylesheet" href="styles/room.css" />
+
     <script src="scripts/menu.js" defer></script>
     <!-- <script src="scripts/home.js" defer></script> -->
     <script type="module" src="scripts/rooms.js" defer></script>
+
 
 
 </head>
@@ -68,15 +70,47 @@
     <main id="room">
         <div class="rooms-container flex">
             <div class="container-spacer">
+                <div class="booking-search-a-d">
+                    <section id="booker-start">
+                        <div class="flex">
+                            <div class="catchphrase">
+                                <h1>Adventure Dates</h1>
+                            </div>
+                            <div class="flex">
+                                <!-- css rename/duplication needed to #homeForm before changing class! -->
+                                <form id="homeForm" class="flex">
+                                    <!-- <label>
+                                        <p>Rooms</p><br>
+                                        <select id="rooms" name="rooms" required>
+                                            <option value="" disabled selected>Select a Room</option>
+
+                                        </select><br>
+                                        <a class="hints" href="rooms.html"><i>Explore our rooms</i></a>
+                                    </label> -->
+                                    <label class="form-arrival">
+                                        <p>Arrival</p><br />
+                                        <input id="arrival" type="date" name="arrival" required />
+                                    </label>
+                                    <p id="dash">-</p>
+                                    <label class="form-departure">
+                                        <p>Departure</p><br />
+                                        <input id="departure" type="date" name="departure" required />
+                                    </label>
+                                </form>
+                                <button id="search-form-submit" class="book-now">Search</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
                 <div class="filter-options-container">
                     <div class="filter-options flex">
                         <p>Price Filters:</p>
                         <div class="filter price-filter">
                             Price
                         </div>
-                        <div class="filter ammenities-filter">
+                        <!-- <div class="filter ammenities-filter">
                             Ammenities
-                        </div>
+                        </div> -->
                         <div class="filter all-filter">
                             All rooms
                         </div>
