@@ -1,4 +1,5 @@
 import { getRooms } from './fetch-rooms.js';
+const roomErrorContainer = document.querySelector('.room-error-container');
 
 // random price function (between 50 and 150)
 
@@ -10,9 +11,10 @@ searchFormSubmit.addEventListener('click', function (event) {
     const arrival = document.getElementById('arrival').value;
     const departure = document.getElementById('departure').value;
 
+    console.log("arrival: ", arrival, "departure: ", departure);
     let dates = getDates(arrival, departure);
-
-    roomLoader(dates);
+// }
+    roomLoader(dates,false);
     
 });
 }
@@ -26,17 +28,14 @@ function getDates(arrival,departure){
 
     let randomBoolean = Math.random() >= 0.5;
     console.log("randomBoolean: ", randomBoolean);
-    if (randomBoolean) {
-        return false;
-    } else {
-        return true;}
-
-
-    // future use will return a list of room ids that are available.
+    // future use will return a list of room ids that are available
+    let roomsAvailable = randomBoolean > 0.5 ? true : false;
 
     
+        return [arrivalDate, departureDate, roomsAvailable];}
 
-}
+
+    
 
 
 function randomPrice() {
@@ -130,23 +129,39 @@ allFilter.addEventListener('click', function (event) {
 
 });}
 
+function dateValidation (arrival, departure) {
+    let currentDate = new Date();
+    // console.log("currentDate: ", currentDate, "arrival: ", arrival, "departure: ", departure);
+    if (arrival < currentDate) {
+        roomErrorContainer.textContent = 'Invalid date selection. Please select a future date range.'
+        return false;
+    } else if (departure < arrival) {
+            roomErrorContainer.textContent = 'Invalid date selection. Please select a departure date after the arrival date.'
+            return false;
+        }
+        else {
+            return true;}
+}
 
 function roomLoader(dates,override=false) {
     let roomFilters = document.querySelector('.filter-options-container');
-
+    
+    roomErrorContainer.textContent = '';
     const roomsResultsContainer = document.querySelector('.rooms-results-container');
-if (dates || override) {
+
+console.log("dates: ", dates);
+if (dateValidation(dates[0],dates[1]) || override) {
 
 
 roomFilters.classList.remove('hide-filter');
 
     roomsResultsContainer.innerHTML = '';
     getRooms().then(roomsData => {
-        console.log("Rooms data loaded:", roomsData); // Check if data is loaded
+        // console.log("Rooms data loaded:", roomsData); 
 //<a href="">View room details →</a>
         let roomsIndex = 0;
         roomsData.forEach(roomData => {
-            console.log("Processing room:", roomData.title); // Verify each room being processed
+            // console.log("Processing room:", roomData.title);
 
             let cardContainer = document.createElement('div');
             cardContainer.setAttribute('class', 'card-container flex');
@@ -157,7 +172,7 @@ roomFilters.classList.remove('hide-filter');
             let dialog = document.createElement('dialog');
             
             let pathMiddle = '/project/'
-            let bookRoomUrl = `${window.location.origin}${pathMiddle}book.html?room=${roomData.id}`;
+            let bookRoomUrl = `${window.location.origin}${pathMiddle}book.html?room=${roomData.id}&arrival=${dates[0]}&departure=${dates[1]}`;
 
             let cardTemplate = `<div class="image-gallery-container">
                             <div class="image-gallery-component">
@@ -260,7 +275,7 @@ roomFilters.classList.remove('hide-filter');
         const backButton = cardContainer.querySelector('.back-button');
         const forwardButton = cardContainer.querySelector('.forward-button');
 
-        console.log("Back and forward buttons created for:", roomData.title);
+        // console.log("Back and forward buttons created for:", roomData.title);
 
         backButton.addEventListener('click', () => {
             console.log("Back button clicked for:", roomData.title)
@@ -294,6 +309,8 @@ roomFilters.classList.remove('hide-filter');
     roomFilters.classList.add('hide-filter');
     // console.log("No rooms available for selected dates");
     roomsResultsContainer.innerHTML = '<h2>No rooms available for selected dates. Try a different date range.</h2>';
+
+
 }
 
 
