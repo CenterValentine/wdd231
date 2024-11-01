@@ -13,6 +13,7 @@
     }
 
 
+
     .image-gallery-component {
         width: 100%;
     }
@@ -49,7 +50,8 @@
 
 
 .content-details {
-
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
 /* test value */
     z-index: 1000;
     overflow:scroll;
@@ -58,6 +60,7 @@
 
 .room-title-ammenities{
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     margin: .5rem 0;
 

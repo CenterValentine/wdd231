@@ -36,6 +36,33 @@ import { getRooms } from './fetch-rooms.js';
 //     sliderWrapper.style.transform = `translateX(${offset}%)`;
 // }
 
+const priceFilter = document.querySelector('.filter.price-filter');
+const amenityFilter = document.querySelector('.filter.ammenities-filter');
+const allFilter = document.querySelector('.filter.all-filter');
+
+
+if (priceFilter || amenityFilter || allFilter) {
+    // console.log("Filters loaded");
+
+priceFilter.addEventListener('click', function (event) {
+    console.log("Price filter clicked");
+    const priceFilter = event.target;
+
+});
+
+amenityFilter.addEventListener('click', function () {
+    console.log("Amenity filter clicked");
+    // const amenityFilter = event.target;
+
+});
+
+allFilter.addEventListener('click', function (event) {
+    // console.log("All filter clicked");
+    // const allFilter = event.target;
+
+});}
+
+
 const roomsResultsContainer = document.querySelector('.rooms-results-container');
 
     getRooms().then(roomsData => {
@@ -48,7 +75,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
 
             
             let cardContainer = document.createElement('div');
-            cardContainer.setAttribute('class', 'card-container flex helo');
+            cardContainer.setAttribute('class', 'card-container flex');
             
             
             let containerSpacer = document.createElement('div');
@@ -100,7 +127,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             let highResImageData = roomData.high_res_images;
             let lowResImageData = roomData.low_res_images;
             let imageContainer = document.createElement('div');
-            imageContainer.setAttribute('class', 'slider-wrapper flex');
+            imageContainer.setAttribute('class', 'slider-wrapper');
 
             lowResImageData.forEach(image => {
                 let imageId = image.id
@@ -110,7 +137,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
                 let imageTag = document.createElement('img');
                 imageTag.setAttribute('src', xetaImageUrl);
                 imageTag.setAttribute('alt', image.name);
-                imageTag.setAttribute('width', '425');
+                imageTag.setAttribute('width', '325');
                 // imageTag.setAttribute('loading', 'lazy');
                 imageContainer.appendChild(imageTag); 
             });
@@ -135,11 +162,6 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
                 roomAmenitiesContainer.appendChild(amenityTag);
             })
 
-
-
-
-            
-
             cardContainer.querySelector('.glider.carousel').appendChild(imageContainer);
             cardContainer.querySelector('.room-ammenities').appendChild(roomAmenitiesContainer);
 
@@ -147,6 +169,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             // console.table(roomData);
             
         const slides = imageContainer.querySelectorAll('img');
+        imageContainer.style.width = `${slides.length * 100}%`;
         let currentIndex = 0;
 
         // Who knew adding event listeners to each back and forward button creation was possible?!?!
@@ -168,7 +191,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
         });
 
         function updateSlider(sliderWrapper, index) {
-            const offset = -index * 95;
+            const offset = -index * 100;
             sliderWrapper.style.transform = `translateX(${offset}%)`;
         }
         });

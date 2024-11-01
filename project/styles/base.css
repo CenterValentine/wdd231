@@ -429,44 +429,44 @@ color: #ffffff;
     
 }
 
-#booker {
+#booker-start {
     width:  100%;
     background-color: var(--primary-color);
     padding: 3rem 0;
     /* margin: auto; */
 }
 
-#booker .flex {
+#booker-start .flex {
     justify-content: center;
     align-items: center;
     /* gap: 1rem; */
 }
 
-#booker h1{
+#booker-start h1{
     color: var(--primary-hard-color);
     font-size: 2.25rem;
     margin-right: 3vw;
 }
 
-#booker label {
+#booker-start label {
     margin: 0 3vw;
     /* font-size: 1.75rem; */
 }
 
-#booker label p {
+#booker-start label p {
     /* margin: 0 .15rem; */
 }
 
-#booker label:first-child p {
+#booker-start label:first-child p {
     margin: 0 2rem;
 }
 
 
-#booker label:first-child, #booker label:not(first-child)  {
+#booker-start label:first-child, #booker-start label:not(first-child)  {
     margin: 0 2.75vw;
 }
 
-#booker input, #booker select {
+#booker-start input, #booker-start select {
     /* padding: 0 1rem .2rem 0; */
     font-size: 1rem;
     border: 1.5px solid var(--primary-hard-color);
@@ -475,7 +475,7 @@ color: #ffffff;
     border-right: transparent;
 }
 
-#booker select {
+#booker-start select {
     padding: 0 6rem 0 0rem;
 }
 
@@ -484,7 +484,7 @@ color: #ffffff;
     /* text-align: end; */
 }
 
-#booker select {
+#booker-start select {
     margin: 0 2rem;
 }
 

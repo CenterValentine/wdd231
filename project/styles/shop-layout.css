@@ -27,13 +27,21 @@ main#room {
     margin: auto;
 }
 
-#room .filter-options{
-    margin: .75rem 3rem .65rem 3rem;
+
+#room .filter-options.flex{
+    border: 1px solid var(--primary-hard-color);
+    padding: 1rem 0.5rem 1rem 1rem;
+    border-radius: 6px;
+    justify-content: flex-start;
+    align-items: center;
+    width: min-content;
+    margin: 0;
+    /* flex-wrap: nowrap ; */
 }
 
-#room .filter-options.flex {
-    justify-content: flex-start;
-    align-items: space-around;
+
+#room .filter-options.flex p, #room .filter-options.flex div {
+    text-wrap: nowrap;
 }
 
 
@@ -55,6 +63,7 @@ main#room {
 
 }
 
+
 .card-container {
     border-radius: .875rem;
     overflow: hidden;
@@ -74,8 +83,7 @@ main#room {
 
 .image-gallery-component {
     height: 18rem;
-    width: 36.1vw;
-    
+    /* width: 36.1vw; */
 }
 
 .image-gallery-container {
@@ -84,22 +92,48 @@ main#room {
 
 .glider {
     /* margin: 0px auto; */
-    /* width: 100% */
+    width: 100%;
+    overflow: hidden; 
 }
 
 .slider-wrapper {
-    /* width: 100%; */
-    /* height: 288px; */
-    /* background-size: cover; */
-    /* overflow: hidden;  */
+    display: flex;
     transition: transform .8s ease-in-out;
     width: 100%;
+    z-index: 1;
+    opacity: 1;
+    flex-wrap: nowrap;
+    z-index: 97;
+    /* position: relative; */
+     /* height: 288px; */
+    /* background-size: cover; */
+}
+/* 
+.slider-wrapper img {
+    border: 1px solid red;
+ }
+ 
+ .image-gallery-container, .slider-wrapper {
+    border: 1px solid blue;
+ } */
+
+
+
+
+ .slider-wrapper {
+    border: 1px solid blue; /* Helps visualize the slider wrapper */
 }
 
 .slider-wrapper img {
-    object-fit: cover;
-    width: 100%; 
+    border: 1px solid red; /* Helps visualize each image */
+}
+ 
+
+.slider-wrapper img {
+    z-index: 99;
+    /* width: 100%;  */
     flex: 0 0 100%;
+    object-fit: cover;
     /* min-width: 100%;  */
     /* height: auto; */
     /* flex-shrink: 0; */
@@ -109,7 +143,7 @@ main#room {
     /* object-position: center;  */
 } 
 
-.carousel {
+.glider.carousel {
     position: relative;
 }
 
@@ -124,25 +158,10 @@ main#room {
 }
 /* aspect ratio ~ 8:5 */
 /* real image-container */
-#room .slider-wrapper {
-    z-index: 97;
-    overflow: hidden;
-    /* align-items: center; */
-    justify-content: flex-start;
-
-}
 
 .glider.carousel {
     position: relative;
 }
-
-
-
-#room .slider-wrapper img {
-    z-index: 1;
-    /* object-position: center; */
-}
-
 
 
 .carousel-button {
@@ -158,7 +177,7 @@ main#room {
     opacity: 0.5;
     cursor: pointer;
     z-index: 99;
-    top: calc(34%);
+    top: calc(4%);
     transition: opacity 0.5s ease; /* Add transition for smooth hover */
 }
 
@@ -178,9 +197,6 @@ main#room {
 }
 
 
-.slider-wrapper {
-
-}
 
 #room .carousel-button > .arrow {
 /* font-size: 1.5rem; */

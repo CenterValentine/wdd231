@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="styles/book.css" />
 
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+    <script type="module" src="scripts/home.js" defer></script>
     <script src="scripts/book.js" defer></script>
     <script src="scripts/get-rooms.js" defer></script>
     <script src="scripts/room-info.js" defer></script>
@@ -66,6 +66,36 @@
         </div>
     </header>
     <main id="book">
+        <section id="booker-start">
+            <div class="flex">
+                <div class="catchphrase">
+                    <h1>BOOK YOUR STAY</h1>
+                </div>
+                <div class="flex">
+                    <form id="homeForm" class="flex">
+                        <label>
+                            <p>Rooms</p><br>
+                            <select id="rooms" name="rooms" required>
+                                <option value="" disabled selected>Select a Room</option>
+                                
+                            </select><br>
+                            <a class="hints" href="rooms.html"><i>Explore our rooms</i></a>
+                        </label>
+                        <label class="form-arrival">
+                            <p>Arrival</p><br />
+                            <input id="arrival" type="date" name="arrival" required />
+                        </label>
+                        <p id="dash">-</p>
+                        <label class="form-departure">
+                            <p>Departure</p><br />
+                            <input id="departure" type="date" name="departure" required />
+                        </label>
+                    </form>
+                    <button id="homeFormSubmit" class="book-now"><b>Book Now</b></button>
+                </div>
+            </div>
+        </section>
+
         <section id="booker">
             <form id="check-out-form">
                 <div id="room-previewer">
@@ -184,7 +214,7 @@
 
                 </fieldset>
             </form>
-            <button id="reservation-request" class="book-now"> Request Reservation</button>
+            <button id="reservation-request" class="book-now formSubmit"> Request Reservation</button>
 
         </section>
     </main>

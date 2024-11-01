@@ -1,3 +1,3 @@
 
-localStorage.getItem("rooms", getRooms());
+// localStorage.getItem("rooms", getRooms());
 

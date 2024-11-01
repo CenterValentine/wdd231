@@ -4,31 +4,35 @@
         padding-right: 0rem;
         
     }
- #booker > .flex:nth-child(1){
+
+
+
+
+ #booker-start > .flex:nth-child(1){
         flex-direction: column;
 
     }
 
 
-    #booker > .flex:nth-child(1) .catchphrase{
+    #booker-start > .flex:nth-child(1) .catchphrase{
         margin-bottom: 2rem;
         margin-top: 0rem;
             }
 
 
-    #booker .catchphrase h1 {
+    #booker-start .catchphrase h1 {
         margin-right: 0;
     }
 
-    #booker .catchphrase label {
+    #booker-start .catchphrase label {
         margin: 0;
     }
 
-    #booker > div > div:nth-child(2).flex{
+    #booker-start > div > div:nth-child(2).flex{
         flex-wrap: wrap;
     }
 
-    #booker > div > div:nth-child(2) button{
+    #booker-start > div > div:nth-child(2) button{
         margin-top: 4rem;
         width: 100%;
         border: 1.5px solid var(--secondary-color);
@@ -45,8 +49,8 @@
     left: 13.75%;   
     /* margin-left: 7rem; */
     /* margin-top: -50px; */
-    
     z-index: 1;
+    
 }
 
 
@@ -73,10 +77,12 @@ li {
 
 }
 
+
+
 @media screen and (max-width: 770px) {
     
 
-    .logo-description {
+    #logo-description {
         opacity: 0;
         display: none;
     }
@@ -108,14 +114,14 @@ li {
     }
 
 
-    #booker .flex #homeForm.flex {
+    #booker-start .flex #homeForm.flex {
     flex-direction: column;} 
 
-    #booker .flex #homeForm.flex .form-arrival{
+    #booker-start .flex #homeForm.flex .form-arrival{
         margin-top:3.25rem;
     }
 
-    #booker .flex #homeForm.flex .form-arrival, #homeForm .form-departure {
+    #booker-start .flex #homeForm.flex .form-arrival, #homeForm .form-departure {
     align-self: self-start;
 margin-left: 3.1rem; }
 
@@ -226,7 +232,7 @@ p#hamburger {
         align-items: center;
     }
 
-    #booker > div > div:nth-child(2).flex {
+    #booker-start > div > div:nth-child(2).flex {
         flex-direction: column;
     }
 }

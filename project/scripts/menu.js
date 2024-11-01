@@ -1,7 +1,7 @@
 let hamburger = document.querySelector("#hamburger");
 let menu = document.querySelector("#menu");
 
-const homeFormSubmit = document.getElementById("homeFormSubmit");
+const homeFormSubmit = document.querySelector(".formSubmit");
 
 if (hamburger && menu) {
   hamburger.addEventListener("click", (event) => {
