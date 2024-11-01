@@ -45,6 +45,18 @@
         height: 55%;
     }
 
+    .slider-wrapper {
+        /* display: flex;
+        transition: transform .8s ease-in-out;
+        width: 100%; */
+        /* z-index: 1;
+        opacity: 1;
+        flex-wrap: nowrap; */
+        /* z-index: 97; */
+        max-height: 35vh;
+        max-width: 70vw;
+        object-fit: cover;
+    }
 
 
     .image-gallery-component {
@@ -52,7 +64,7 @@
     }
 
     .carousel-button{
-        top: 14%;
+        top: calc(25%);
     }
 
 .text-container {

@@ -42,6 +42,23 @@ function randomPrice() {
 //     sliderWrapper.style.transform = `translateX(${offset}%)`;
 // }
 
+function sortbyprice() {
+const cardContainers = Array.from(document.querySelectorAll('.card-container'));
+
+// if (cardContainers) {
+    const sortedCards = cardContainers.map(cardContainer => ({
+element: cardContainer,
+price: parseFloat(cardContainer .querySelector('.price-filter-target').textContent)
+    })).sort((a, b) => a.price - b.price);
+
+
+const roomsResultsContainer = document.querySelector('.rooms-results-container');
+roomsResultsContainer.innerHTML = ''; 
+sortedCards.forEach(card=> roomsResultsContainer.appendChild(card.element));
+
+// }
+}
+
 const priceFilter = document.querySelector('.filter.price-filter');
 const amenityFilter = document.querySelector('.filter.ammenities-filter');
 const allFilter = document.querySelector('.filter.all-filter');
@@ -52,7 +69,8 @@ if (priceFilter || amenityFilter || allFilter) {
 
 priceFilter.addEventListener('click', function (event) {
     console.log("Price filter clicked");
-    const priceFilter = event.target;
+    // const priceFilter = event.target;
+    sortbyprice();
 
 });
 
@@ -74,11 +92,11 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
     getRooms().then(roomsData => {
         console.log("Rooms data loaded:", roomsData); // Check if data is loaded
 
-
+//<a href="">View room details →</a>
         let roomsIndex = 0;
         roomsData.forEach(roomData => {
             console.log("Processing room:", roomData.title); // Verify each room being processed
-            
+
             let cardContainer = document.createElement('div');
             cardContainer.setAttribute('class', 'card-container flex');
             
@@ -114,13 +132,13 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
         ${roomData.description}
                                 </div>
                                 <div class="room-direct room-info">
-                                    View room details →
+                                    
                                 </div>
                             </div>
                             <div class="content-footer">
                                 <div class="horizontal-line"></div>
                                 <div class="content-room-price flex">
-                                    <span>${randomPrice()    ||roomData.price || '95'} </span><span>USD/Night</span><button>View Rates</button></span>
+                                    <span class="price-filter-target">${randomPrice()    ||roomData.price || '95'} </span><span>USD/Night</span><button>View Rates</button></span>
                                 </div>
                             </div>
                         </div>`
