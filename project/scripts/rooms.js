@@ -1,5 +1,11 @@
 import { getRooms } from './fetch-rooms.js';
 
+// random price function (between 50 and 150)
+
+function randomPrice() {
+    return Math.floor(Math.random() * 100) + 50;
+}
+
 // const sliderWrapper = document.querySelector('.slider-wrapper');
 // const sliderWrappers = document.querySelectorAll('.slider-wrapper');
 // const backButton = document.querySelector('.back-button');
@@ -69,15 +75,14 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
         console.log("Rooms data loaded:", roomsData); // Check if data is loaded
 
 
+        let roomsIndex = 0;
         roomsData.forEach(roomData => {
             console.log("Processing room:", roomData.title); // Verify each room being processed
-
-
             
             let cardContainer = document.createElement('div');
             cardContainer.setAttribute('class', 'card-container flex');
             
-            
+
             let containerSpacer = document.createElement('div');
             containerSpacer.setAttribute('class', 'container-spacer rooms-results-container');
             let dialog = document.createElement('dialog');
@@ -115,7 +120,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
                             <div class="content-footer">
                                 <div class="horizontal-line"></div>
                                 <div class="content-room-price flex">
-                                    <span>${roomData.price || '95'} </span><span>USD/Night</span><button>View Rates</button></span>
+                                    <span>${randomPrice()    ||roomData.price || '95'} </span><span>USD/Night</span><button>View Rates</button></span>
                                 </div>
                             </div>
                         </div>`
@@ -129,6 +134,8 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             let imageContainer = document.createElement('div');
             imageContainer.setAttribute('class', 'slider-wrapper');
 
+
+            let imageIndex = 0;
             lowResImageData.forEach(image => {
                 let imageId = image.id
                 let xetaImageUrl = image.url;
@@ -138,8 +145,14 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
                 imageTag.setAttribute('src', xetaImageUrl);
                 imageTag.setAttribute('alt', image.name);
                 imageTag.setAttribute('width', '325');
-                // imageTag.setAttribute('loading', 'lazy');
+                if (imageIndex === 0 && roomsIndex <= 3) {
+                    imageTag.setAttribute('loading', 'eager');
+                } else {
+                    imageTag.setAttribute('loading', 'lazy');
+                }
+                
                 imageContainer.appendChild(imageTag); 
+                imageIndex++;
             });
 
             // incomplete
@@ -165,7 +178,7 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             cardContainer.querySelector('.glider.carousel').appendChild(imageContainer);
             cardContainer.querySelector('.room-ammenities').appendChild(roomAmenitiesContainer);
 
-            roomsResultsContainer.appendChild(cardContainer);
+            roomsResultsContainer.append(cardContainer);
             // console.table(roomData);
             
         const slides = imageContainer.querySelectorAll('img');
@@ -194,6 +207,8 @@ const roomsResultsContainer = document.querySelector('.rooms-results-container')
             const offset = -index * 100;
             sliderWrapper.style.transform = `translateX(${offset}%)`;
         }
+        roomsIndex++;
+
         });
 
         

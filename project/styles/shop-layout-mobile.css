@@ -1,12 +1,45 @@
+
+@media screen and (min-width: 1200px) {
+    .card-container {
+        /* max-width: 1140px; */
+        max-width:  59.375vw;
+        width: 100%;
+        transition: width 1s ease;
+    }
+}
+
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .card-container {
+        /* max-width: 1140px; */
+        max-width:  64.375vw;
+        width: 100%;
+        transition: width 1s ease;
+    }
+}
+
+
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+    .card-container {
+        /* max-width: 1140px; */
+        max-width:  69.375vw;
+        width: 100%;
+        transition: width 1s ease;
+    }
+}
+
+
+
+
 @media screen and (max-width: 768px){
-
-
 
     main#room {
         padding-top: 30px;
         }
 
-
+#room .filter-options-container {
+    width: 100%;
+}
     .image-gallery-container {
         width: 100%;
         height: 55%;
@@ -29,13 +62,17 @@
     
 }
 
-
+.rooms-results-container {
+    width: 100%;
+}
 
 .card-container {
+    /* max-width: 1140px; */
     flex-direction: column;
-    width: 100%;
-    height: 20rem;
-   
+    max-width:  70.375vw;
+    width: 70vw;
+    transition: width 1s ease;
+    height: 25rem;
 }
 
 

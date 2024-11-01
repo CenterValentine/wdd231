@@ -104,6 +104,21 @@ main#room {
     opacity: 1;
     flex-wrap: nowrap;
     z-index: 97;
+    max-height: 30vh;
+    max-width: 60vw;
+    object-fit: cover;
+    /* object-fit: contain; */
+    /* object-fit: fill; */
+    /* object-fit: scale-down; */
+    /* object-fit: none; */
+    /* object-fit: unset; */
+    /* object-fit: inherit; */
+    /* object-fit: initial; */
+    /* object-fit: revert; */
+    /* object-fit: hidden; */
+    /* object-fit: visible; */
+    /* object-fit: auto; */
+    
     /* position: relative; */
      /* height: 288px; */
     /* background-size: cover; */
@@ -119,14 +134,14 @@ main#room {
 
 
 
-
+/* 
  .slider-wrapper {
-    border: 1px solid blue; /* Helps visualize the slider wrapper */
-}
-
+    border: 1px solid blue; 
+} */
+/* 
 .slider-wrapper img {
-    border: 1px solid red; /* Helps visualize each image */
-}
+    border: 1px solid red; 
+} */
  
 
 .slider-wrapper img {
@@ -324,21 +339,4 @@ width: 100%;
 
 .horizontal-line {
     border-top: 1.5px solid var(--primary-soft-color);
-}
-
-@media screen and (min-width: 1200px) {
-    .card-container {
-        max-width: 1140px;
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-@media screen and (max-width: 770px) {
-
-
 }
