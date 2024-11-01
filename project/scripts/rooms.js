@@ -97,7 +97,7 @@ sortedCards.forEach(card=> roomsResultsContainer.appendChild(card.element));
 }
 
 const priceFilter = document.querySelector('.filter.price-filter');
-const amenityFilter = document.querySelector('.filter.ammenities-filter');
+const amenityFilter = document.querySelector('.filter.ammenities-filter') || false;
 const allFilter = document.querySelector('.filter.all-filter');
 
 
@@ -109,13 +109,20 @@ priceFilter.addEventListener('click', function (event) {
     // const priceFilter = event.target;
     sortbyprice();
 
+allFilter.addEventListener('click', function (event) {
+console.log("All filter clicked");
+roomLoader(false,true);
+
+
 });
 
-amenityFilter.addEventListener('click', function () {
-    console.log("Amenity filter clicked");
-    // const amenityFilter = event.target;
-
 });
+
+// amenityFilter.addEventListener('click', function () {
+//     console.log("Amenity filter clicked");
+//     // const amenityFilter = event.target;
+
+// });
 
 allFilter.addEventListener('click', function (event) {
     // console.log("All filter clicked");
@@ -124,10 +131,15 @@ allFilter.addEventListener('click', function (event) {
 });}
 
 
-function roomLoader(dates) {
+function roomLoader(dates,override=false) {
+    let roomFilters = document.querySelector('.filter-options-container');
 
     const roomsResultsContainer = document.querySelector('.rooms-results-container');
-if (dates){
+if (dates || override) {
+
+
+roomFilters.classList.remove('hide-filter');
+
     roomsResultsContainer.innerHTML = '';
     getRooms().then(roomsData => {
         console.log("Rooms data loaded:", roomsData); // Check if data is loaded
@@ -278,6 +290,8 @@ if (dates){
 
 
 } else {
+
+    roomFilters.classList.add('hide-filter');
     // console.log("No rooms available for selected dates");
     roomsResultsContainer.innerHTML = '<h2>No rooms available for selected dates. Try a different date range.</h2>';
 }

@@ -7,6 +7,11 @@
 /* change to mobile at 770 */
 
 
+
+.hide-booker, .hide-filter {
+    display: none;
+};
+
 .system-fonts {
     font-family: Afacad Flux, Karla, Raleway, sans-serif;
 }
